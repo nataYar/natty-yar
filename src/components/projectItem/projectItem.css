@@ -1,0 +1,133 @@
+.project-container {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.project-description {
+    font-weight: 400;
+    margin: 1rem 0;
+    font-size: 1.25rem;
+    font-weight: 400;
+    line-height: 1.25;
+}
+
+.project-name {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: space-between;
+}
+
+.project-name h3{
+    font-weight: 400;
+    font-size: 2rem;
+    text-transform: uppercase;
+    text-decoration: underline;
+    text-align: start;
+}
+
+.project-img-container {
+    height: fit-content;
+    width: auto;
+    overflow: hidden;
+    margin: 1rem 0;
+}
+
+.project-main-img {
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    border-radius: .6rem;
+}
+
+.highlight-font {
+    font-family: 'Inconsolata', monospace;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.highlight-purple {
+    color: #8276d1;
+}
+
+.links {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    width: fit-content;
+}
+.links div{
+    font-family: 'Inconsolata', monospace;
+    font-size: 1.25rem;
+    text-decoration: none; 
+    border: 3px solid;
+    border-radius: 2.5rem;
+    margin-left: .5rem;
+    padding: .3rem;
+}
+.links a {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+@media screen and (min-width: 992px) {
+    .project-container{
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        align-items:flex-start;
+    }
+
+    .title-side {
+        width: 45%;
+        height: 100%;
+    }
+
+    .description-side {
+        width: 50%;
+        height: auto;
+    }
+
+    .project-name h3{
+        font-weight: 400;
+        font-size: 3.3rem;
+    }
+
+    .project-img-container {
+        width: 100%;
+        height: auto;
+    }
+
+    .project-main-img {
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 100%;
+    }
+
+    .project-item:nth-child(2n) .project-container{
+        flex-flow: row-reverse wrap;
+    }
+
+    .project-item:nth-child(2n) .project-name  {
+        flex-direction: row-reverse;
+    }
+
+    .project-item:nth-child(2n) .project-name h3{
+        text-align: end;
+    }
+
+    .project-item:nth-child(2n) .title-side{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    .project-item:nth-child(2n) .links div{
+        margin-left: 0rem;
+        margin-right: .5rem;
+    }
+
+}

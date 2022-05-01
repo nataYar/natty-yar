@@ -1,0 +1,32 @@
+.about-container {
+    height: auto;
+    background-color: #e3e0de;
+    padding: 20vh 1.5rem;
+    text-transform: uppercase;
+}
+
+.text-about {
+    margin: 0;
+    line-height: 1.25;
+    font-size: 1.8rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+}
+
+@media screen and (min-width: 992px) {
+    .about-container {
+        display: flex;
+        flex-flow: row wrap;
+        align-items: baseline;
+        justify-content: space-between;
+        width: 100%;
+        height: auto;
+        padding: 20vh 4.37rem;
+        /* margin-right: 6rem; */
+    }
+    .text-about {
+        width: 50%;
+        padding-right: 6rem;
+    }
+}
+
