@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { NavLink } from 'react-router-dom';
+// import { NavLink } from 'react-router-dom';
 import './nav.css';
 
 const Nav = ( {tabletView} ) => {
@@ -12,8 +12,7 @@ const Nav = ( {tabletView} ) => {
   return (
     <nav>
       <div className='sticky-nav'>
-        <NavLink to='/home' className={click ? 'logo logo-beige' : 'logo logo-black'}>
-        </NavLink>
+        <a href='#'><div className={click ? 'logo logo-beige' : 'logo logo-black'}></div></a>
         <div className={ click ? 'burger clicked' : 'burger' }
         onClick={handleClick}>
           <span className='first'></span>
@@ -22,7 +21,7 @@ const Nav = ( {tabletView} ) => {
         </div>
       </div>
 
-      <ul className={ click ? 'nav-wrapper active' : 'nav-wrapper' }>
+      {/* <ul className={ click ? 'nav-wrapper active' : 'nav-wrapper' }>
         <li>
           <NavLink to='/about' className='nav-item nav-about'>
             About/
@@ -37,6 +36,24 @@ const Nav = ( {tabletView} ) => {
           <NavLink to='/contact' className='nav-item nav-footer'>
             Contact/
           </NavLink>
+        </li>
+      </ul> */}
+
+      <ul className={ click ? 'nav-wrapper active' : 'nav-wrapper' }>
+        <li onClick={handleClick}>
+          <a href="#section-about" className='nav-item nav-about'>
+            About/
+          </a>
+        </li>
+        <li onClick={handleClick}>
+          <a href="#section-projects" className='nav-item nav-projects'>
+            Projects/
+          </a>
+        </li>
+        <li onClick={handleClick}>
+          <a href="#section-footer" className='nav-item nav-footer'>
+            Contact/
+          </a>
         </li>
       </ul>
     </nav>

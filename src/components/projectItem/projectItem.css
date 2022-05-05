@@ -4,33 +4,43 @@
 
 .project-description {
     font-weight: 400;
-    margin: 1rem 0;
+    padding: 1rem 0;
     font-size: 1.25rem;
     font-weight: 400;
     line-height: 1.25;
+    background-color: #e3e0de;
+    position: relative;
+    z-index: 3;
 }
 
 .project-name {
     width: 100%;
     display: flex;
-    flex-direction: row;
+    flex-flow: row wrap;
     align-items: baseline;
     justify-content: space-between;
 }
 
 .project-name h3{
     font-weight: 400;
-    font-size: 2rem;
+    font-size: 2.2rem;
     text-transform: uppercase;
     text-decoration: underline;
-    text-align: start;
+    width: 54%;
+}
+
+.title-side {
+    position: relative;
+    z-index: 3;
 }
 
 .project-img-container {
     height: fit-content;
     width: auto;
     overflow: hidden;
-    margin: 1rem 0;
+    padding: 1rem 0;
+
+    background-color: hsl(24, 8%, 88%);
 }
 
 .project-main-img {
@@ -39,6 +49,10 @@
     background-repeat: no-repeat;
     width: 100%;
     border-radius: .6rem;
+    position: relative;
+    z-index: 3;
+
+    background-color: hsl(24, 8%, 88%);
 }
 
 .highlight-font {
@@ -53,20 +67,23 @@
 
 .links {
     display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
+    flex-flow: row wrap;
+    justify-content: flex-end;
     align-items: center;
-    width: fit-content;
+    width: 45%;
 }
+
 .links div{
     font-family: 'Inconsolata', monospace;
     font-size: 1.25rem;
     text-decoration: none; 
+    text-align: center;
     border: 3px solid;
     border-radius: 2.5rem;
     margin-left: .5rem;
     padding: .3rem;
 }
+
 .links a {
     cursor: pointer;
     text-decoration: none;
@@ -78,6 +95,10 @@
         flex-flow: row wrap;
         justify-content: space-between;
         align-items:flex-start;
+    }
+
+    .links {
+        justify-content: flex-end;
     }
 
     .title-side {
@@ -130,4 +151,7 @@
         margin-right: .5rem;
     }
 
+    .project-item:nth-child(2n) .links{
+        justify-content: flex-start;
+    }
 }

@@ -1,14 +1,18 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './projectItem.css';
 
-const ProjectItem = ({ tabletView, name, url, git, img, description, technologies, features, challenges }) => {
+const ProjectItem = ({ tabletView, width, name, url, git, img, description, technologies, features, challenges }) => {
   return (
     <div className='project-container'> 
       <div className='project-name'>
         <h3>{name}</h3>
           <div className='links'>
-            <a href={`${url}`} target='_blank'><div className='highlight-purple highlight-font'>live</div></a>
-            <a href={`${git}`} target='_blank'><div className='highlight-purple highlight-font'>code</div></a>
+            <a href={`${url}`} target='_blank'>
+              <div className='highlight-purple highlight-font'>live</div>
+            </a>
+            <a href={`${git}`} target='_blank'>
+              <div className='highlight-purple highlight-font'>code</div>
+            </a>
         </div> 
       </div>
 

@@ -6,11 +6,7 @@ import notesImg from '../../images/screens/laptop/notes.png';
 import weatherImg from '../../images/screens/laptop/weather.png';
 import gameImg from '../../images/screens/laptop/game.png';
 
-import { gsap } from 'gsap';
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-gsap.registerPlugin(ScrollTrigger); 
-
-const Projects = ( {tabletView} ) => {
+const Projects = ( {tabletView, width} ) => {
   const projectsArray = [
     { id: '1',
       name: 'chat app',
@@ -54,64 +50,19 @@ const Projects = ( {tabletView} ) => {
       challenges: '??????',
       features: ''
     }
-    // { 
-    //   id:'5',
-    //   name: 'portfolio website',
-    //   url: 'url',
-    //   img: 'img',
-    //   description: 'Responsivene and modern-looking',
-    //   technologies: 'React, HTML, CSS',
-    //   features: ''
-    // }
   ]
 
-  useEffect(() => {
-  //   document.querySelectorAll('.section-title').forEach(
-  //     function(el) {
-  //       const tlAbout = gsap.timeline({
-  //         scrollTrigger: {
-  //           trigger: el,
-  //           start: "-10%",
-            
-  //         }
-  //       });
-  //       tlAbout.fromTo(el,{y: '70px',}, { y: '0px', duration: .8, ease: "back.out(1.2)",});
-  //       tlAbout.fromTo(el, { opacity: 0 }, { opacity: 1, duration: .8 }, "<");
-  //     }
-  //   )
-    
-  //  // Highlight  fade in
-  //   const tlHin = gsap.timeline({
-  //     scrollTrigger: {
-  //       trigger: ".about-container",
-  //       scrub: true,
-  //       start: "-60%", 
-  //       end: "20%",
-  //     },
-  //   });
-  //   tlHin.fromTo(
-  //     ".highlight-scroll",
-  //     { color: "#000000" },
-  //     { color: "#8276d1", stagger: 1, duration: .7 }
-  //   );
-
-    // Highlight fade out
-    // const tlHout = gsap.timeline({
-    //   scrollTrigger: {
-    //     trigger: ".about-container",
-    //     scrub: true,
-    //     start: "-40%", 
-    //     end: "40%",
-    //   },
-    // });
-    // tlHout.to(
-    //   ".highlight-scroll", { color: "#000000", stagger: 1, duration: .7 }
-    // );
-},[])
-    
+//   import { projectNameFn } from '../animation.js'
+// const projectNamesArray = [];
+//   const names = document.querySelectorAll('.project-name')
   
+//   useEffect(() => { 
+//     projectNameFn()
+//   }, [names]) 
+
+console.log(projectsArray)
   return (
-    <div className='projects-container'>
+    <div className='projects-container' id='section-projects'>
       <h3 className='section-title'>Projects/</h3>
       {
         projectsArray.map(el => {
@@ -119,6 +70,7 @@ const Projects = ( {tabletView} ) => {
             <div className='project-item' key={el.id}>
               <ProjectItem 
               tabletView={tabletView} 
+              width={width}
               name={el.name} 
               url={el.url}
               git={el}
@@ -131,6 +83,7 @@ const Projects = ( {tabletView} ) => {
             </div>
           )
         })
+        
       }
     </div>
   )

@@ -2,6 +2,7 @@
     height: auto;
     width: 100vw;
     padding: 1.5rem;
+    margin-top: -0.1%;
     background-color: hsl(24, 8%, 88%);
 
     display: flex;
@@ -24,7 +25,6 @@
         justify-content: space-between;
         width: 100%;
         padding: 1rem 4.37rem;
-        /* background-color: blue; */
     }
 
     .project-item {

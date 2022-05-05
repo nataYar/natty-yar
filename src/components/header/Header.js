@@ -1,9 +1,7 @@
-import './header.css';
 import React, { useRef , useEffect } from 'react';
+import './header.css';
 import { gsap } from 'gsap';
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-gsap.registerPlugin(ScrollTrigger); 
-
+import { sliderFn, heroImgFn, sectionNameFn } from '../animation.js';
 
 const Header = () => {
   const introRef = useRef(null);
@@ -12,26 +10,18 @@ const Header = () => {
   const infoRef = useRef(null);
   const heroRef = useRef(null)
   
+  //animating img and sliders on load
   useEffect(() => {
-    const tl = gsap.timeline({ defaults: { ease: 'power1.out' } });
-    tl.to('.text', { y: '0%', stagger: .1 , duration: .5});
-    tl.to('.slider', { y: '-100%', stagger: .2, duration: .8, delay: .5 });
-    tl.to(introRef.current, { y: '-100%', duration: 1 }, '<');
-    tl.fromTo(nameRef.current, { opacity: 0 }, { opacity: 1, duration: .5 });
-    tl.fromTo(infoRef.current, { opacity: 0 }, { opacity: 1, duration: .5 }, '<');
+    sliderFn(introRef.current, nameRef.current, infoRef.current);
   },[])
 
-  useEffect(() => {
-    const tl2 = gsap.timeline({
-      scrollTrigger: {
-        trigger: '.header',
-        start: "0%",
-        end: "100%",
-        scrub: true
-      }
-    });
-    tl2.to(heroRef.current, { y:'50px', duration: 7 });
-  },[])
+//  useEffect(() => {
+//     sectionNameFn()
+//   },[])
+
+//   useEffect(() => {
+//     heroImgFn(heroRef.current);
+//   },[heroRef])
 
   return (
   <div className='header'>
