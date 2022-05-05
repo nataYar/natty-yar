@@ -12,32 +12,32 @@ export const sliderFn = (introRef, nameRef, infoRef) => {
 }
 
 export const sectionNameFn = () => {
-  const titles = gsap.utils.toArray('.section-title');
-    titles.forEach((el) => {
-      const tlSectionName = gsap.timeline({
-        scrollTrigger: {
-          trigger: el,
-          start: () => '0% 100%',
-          markers:true
-        }
-      });
-      tlSectionName.fromTo(el, {y: '50px',}, { y: '0px', duration: .8, ease: "back.out(1.2)",});
-      tlSectionName.fromTo(el, { opacity: 0 }, { opacity: 1, duration: .8 }, "<");
-    })
+  // const titles = gsap.utils.toArray('.section-title');
+  //   titles.forEach((el) => {
+  //     const tlSectionName = gsap.timeline({
+  //       scrollTrigger: {
+  //         trigger: el,
+  //         start: () => '0% 100%',
+  //         markers:true
+  //       }
+  //     });
+  //     tlSectionName.fromTo(el, {y: '50px',}, { y: '0px', duration: .8, ease: "back.out(1.2)",});
+  //     tlSectionName.fromTo(el, { opacity: 0 }, { opacity: 1, duration: .8 }, "<");
+  //   })
 }
 
 
 export const heroImgFn = (heroRef) => {
-  const tl2 = gsap.timeline({
-    scrollTrigger: {
-      trigger: '.header',
-      start: "0%",
-      // end: "100%",
-      markers: true,
-      scrub: true
-    }
-  });
-  tl2.to(heroRef, { y:'100px', duration: 7 });
+  // const tl2 = gsap.timeline({
+  //   scrollTrigger: {
+  //     trigger: '.header',
+  //     start: "0%",
+  //     // end: "100%",
+  //     markers: true,
+  //     scrub: true
+  //   }
+  // });
+  // tl2.to(heroRef, { y:'100px', duration: 7 });
 }
 
 // export const projectNameFn = () => {
@@ -63,13 +63,13 @@ export const highlightAboutFn = () => {
       trigger: ".about-container",
       scrub: true,
       start: "-60%", 
-      // end: "20%",
+      end: "20%",
     },
   });
   tlHin.fromTo(
     ".highlight-scroll",
     { color: "#000000" },
-    { color: "#8276d1", stagger: 1, duration: .7 }
+    { color: "#8276d1", stagger: .5, duration: .7 }
   );
 
   // Highlight fade out
@@ -78,7 +78,7 @@ export const highlightAboutFn = () => {
       trigger: ".about-container",
       scrub: true,
       start: "-40%", 
-      // end: "40%",
+      end: "40%",
     },
   });
   tlHout.to(

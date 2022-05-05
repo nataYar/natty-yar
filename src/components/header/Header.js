@@ -1,6 +1,5 @@
 import React, { useRef , useEffect } from 'react';
 import './header.css';
-import { gsap } from 'gsap';
 import { sliderFn, heroImgFn, sectionNameFn } from '../animation.js';
 
 const Header = () => {
@@ -15,13 +14,13 @@ const Header = () => {
     sliderFn(introRef.current, nameRef.current, infoRef.current);
   },[])
 
-//  useEffect(() => {
-//     sectionNameFn()
-//   },[])
+ useEffect(() => {
+    sectionNameFn()
+  },[])
 
-//   useEffect(() => {
-//     heroImgFn(heroRef.current);
-//   },[heroRef])
+  useEffect(() => {
+    heroImgFn(heroRef.current);
+  },[heroRef])
 
   return (
   <div className='header'>
