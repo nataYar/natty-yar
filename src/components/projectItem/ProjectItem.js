@@ -1,7 +1,22 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import './projectItem.css';
+import Slider from './Slider'
 
-const ProjectItem = ({ tabletView, width, name, url, git, img, description, technologies, features, challenges }) => {
+const ProjectItem = ({ tabletView, name, url, git, img, img2, description, technologies, features, challenges, video, mobileImg }) => {
+
+  const handleModalImg = (childData) => {
+    document.getElementById('myModal').style.top = '0%';
+    document.getElementById('myModal').style.opacity = '1';
+    // document.getElementById('myModal').classList.add = 'modal-animation';
+    document.getElementById('imgModal').src = childData;
+  }
+
+  const closeModal = () => {
+    document.getElementById('myModal').style.top = '100%';
+    document.getElementById('myModal').style.opacity = '0';
+    // document.getElementById('myModal').classList.remove = 'animation';
+  }
+
   return (
     <div className='project-container'> 
       <div className='project-name'>
@@ -16,13 +31,17 @@ const ProjectItem = ({ tabletView, width, name, url, git, img, description, tech
         </div> 
       </div>
 
+      <div id='myModal' className='modal' onClick={ () => closeModal() } >
+        <img className='modal-content' id='imgModal' />
+      </div>
+
       <div className='title-side'>
         { 
           tabletView ?  <p className='project-description'> {description}</p> : null
         }
-        <div className='project-img-container'>
-          <img className='project-main-img' src={img} alt='project img'/>
-        </div>
+        
+        <Slider parentCallback={ handleModalImg } mobileImg={mobileImg} img={img} img2={img2} video={video} />
+      
       </div>
         
       <div className='description-side'>

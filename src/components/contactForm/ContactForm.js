@@ -1,11 +1,16 @@
-import React, {useRef} from 'react';
+import React, {useState, useRef, useEffect} from 'react';
 import './contactForm.css';
 import emailjs from '@emailjs/browser';
 import { SERVICE_ID, TEMPLATE_ID, PUBLIC_KEY } from '../constants.js';
+import { flowerAnimationOne } from '../animation';
 
 const ContactForm = () => {
+    const [inputName, setInputName] = useState(false);
+    const [inputEmail, setInputEmail] = useState(false);
+    const [inputMessage, setInputMessage] = useState(false);
+
     const form = useRef();
-    
+
     const sendEmail = (e) => {
         e.preventDefault();
 
@@ -16,26 +21,41 @@ const ContactForm = () => {
             console.log(error.text);
         });
         e.target.reset();
+        let imgs = document.querySelectorAll('.svg');
+        imgs.forEach( (el) => {  el.classList.remove("stepThree") })
     }
 
+    const detectName = (e) => { e.target.value.length > 0 ? setInputName(true) : setInputName(false) }
+
+    const detectEmail = (e) => { e.target.value.length > 0 ? setInputEmail(true) : setInputEmail(false) }
+
+    const detectMessage = (e) => { e.target.value.length > 0 ? setInputMessage(true) : setInputMessage(false) }
+
+    useEffect(() => {
+        flowerAnimationOne(inputName, inputEmail, inputMessage)
+    })
+
     return (
-    <div className='form-container'>
-        <form ref={form} onSubmit={sendEmail}>
-            <div className='field'>
-                <input id='name' type='text' name='name' required/>
-                <label htmlFor="name">Name</label>
-            </div>
-            <div className='field'>
-                <input id='email' type='email' name='email' required/>
-                <label htmlFor='email'>Email</label>
-            </div>
-            <div className='field'>
-                <textarea id='message' type='text' name='message' required></textarea>
-                <label htmlFor='message'>Message</label>
-            </div>
-            <input type='submit' id='submit' />
-        </form>
-    </div>
+        <div className='form-container'>
+            <p>Feel free to send an e-mail on hello@.com</p>
+            <p>Or drop-in a mail here!</p>
+
+            <form ref={form} onSubmit={sendEmail}>
+                <div className='field'>
+                    <input id='name' type='text' name='name' onChange={e => detectName(e)} required/>
+                    <label htmlFor="name">Name</label>
+                </div>
+                <div className='field'>
+                    <input id='email' type='email' name='email' onChange={e => detectEmail(e)} required/>
+                    <label htmlFor='email'>Email</label>
+                </div>
+                <div className='field'>
+                    <textarea id='message' type='text' name='message' onChange={e => detectMessage(e)} required></textarea>
+                    <label htmlFor='message'>Message</label>
+                </div>
+                <input type="submit"  id='submit' value='Send' />
+            </form>
+        </div>
     )
   }
 

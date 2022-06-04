@@ -1,0 +1,352 @@
+.stopAnimation {
+    -webkit-animation: none !important;
+    -moz-animation: none !important;
+    -o-animation: none !important;
+    -ms-animation: none !important;
+    animation: none !important;
+}
+
+svg {
+    display: block;
+}
+
+#blob {
+    position: absolute;
+    bottom: 45%;
+    right: 25%;
+    transform: translate(45%, 10%) rotate(-45deg);
+    -webkit-transform: translate(45%, 10%) rotate(-45deg);
+    transition: all 1s ease-in-out;
+    -webkit-transition: all 1.5s ease-in-out;
+    -moz-transition: all 1.5s ease-in-out;
+    -o-transition: all 1.5s ease-in-out;
+    z-index: 0;
+}
+#blob.stepOne {
+    bottom: 40%;
+}
+#blob.stepTwo {
+    bottom: 35%;
+}
+#blob.stepThree {
+    bottom: 28%;
+}
+
+
+.envelope {
+    width: 14rem;
+    display: block;
+    position: absolute;
+    bottom: 10%;
+    right: 23%;
+    transform: translateX(50%);
+    -webkit-transform:  translateX(50%);
+    transition: all 1s ease-in-out;
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    z-index: 10;
+}
+.envelope.stepOne {
+    bottom: 12%;
+}
+.envelope.stepTwo {
+    bottom: 25%;
+}
+.envelope.stepThree {
+    bottom: 35%;
+}
+
+
+.top-envelope {
+    width: 14rem;
+    position: absolute;
+    bottom: 10%;
+    right: 23%;
+    transform: translateX(50%);
+    -webkit-transform:  translateX(50%);
+    transition: all 1s ease-in-out;
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    z-index: 1;
+}
+.top-envelope.stepOne {
+    bottom: 12%;
+}
+.top-envelope.stepTwo {
+    bottom: 25%;
+}
+.top-envelope.stepThree {
+    bottom: 35%;
+}
+
+
+
+#letter {
+    width: 9rem;
+    position: absolute;
+
+    top: 22%;
+    right: 20%;
+    animation: float-20 2s infinite ease-in-out;
+    -webkit-animation: float-20 2s infinite ease-in-out;
+    transition: all 1s ease-in-out;
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    transform: rotate(-20deg);
+    -webkit-transform: rotate(-20deg);
+    z-index: 8;
+}
+#letter.stepOne {
+    top: 24%;
+    transform: rotate(-20deg);
+}
+#letter.stepTwo {
+    top: 34%;
+    right: 18%;
+    transform: rotate(-20deg);
+}
+#letter.stepThree {
+    top: 45%;
+    right: 18%;
+    transform: rotate(-20deg);
+}
+
+
+#fl3purpleStripes {
+    width: 6rem;
+    position: absolute;
+    
+    top: 15%;
+    right: 5%;
+    animation: float30 3s infinite ease-in-out;
+    -webkit-animation: float30 3s infinite ease-in-out;
+    transform: rotate(30deg);
+    -webkit-transform:rotate(30deg);
+    z-index: 2;
+    transition: all 1s ease-in-out;
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+}
+
+#fl3purpleStripes.stepOne {
+    top: 20%;
+    right: 7%;
+    transform: rotate(30deg);
+}
+#fl3purpleStripes.stepTwo {
+    top: 30%;
+    right: 9%;
+    transform: rotate(30deg);
+}
+#fl3purpleStripes.stepThree {
+    top: 32%;
+    right: 14%;
+    transform: rotate(40deg);
+}
+
+
+#flPink {
+    width: 6rem;
+    position: absolute;
+    top: 15%;
+    left: 59%;
+    animation: float-20 4s infinite ease-in-out;
+    -webkit-animation: float-20 4s infinite ease-in-out;
+    z-index: 3;
+    transition: all 1s ease-in-out;
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+}
+#flPink.stepOne {
+    top: 20%;
+}
+#flPink.stepTwo {
+    top: 31%;
+    left: 62%;
+}
+#flPink.stepThree{
+    top: 33%;
+    left: 68%;
+}
+
+
+#flYellow {
+    width: 6rem;
+    position: absolute;
+    top: 10%;
+    right: 29%;
+    animation: float30 3s infinite ease-in-out;
+    -webkit-animation:float30 3s infinite ease-in-out;
+    transition: all 1s ease-in-out;
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    z-index: 10;
+}
+#flYellow.stepOne {
+    top: 13%;
+}
+#flYellow.stepTwo {
+    top: 25%;
+    right: 28%;
+}
+#flYellow.stepThree {
+    top: 42%;
+    right: 26%;
+}
+
+
+#twigBrown1 {
+    width: 6rem;
+    position: absolute;
+    z-index: 2;
+
+    top: 10%;
+    right: 10%;
+    animation: float 2.2s infinite ease-in-out;
+    -webkit-animation:float 2.2s infinite ease-in-out;
+    transition: all 1s ease-in-out;
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    
+}
+#twigBrown1.stepOne {
+    top: 15%;
+}
+#twigBrown1.stepTwo {
+    top: 26%;
+    right: 11%;
+}
+#twigBrown1.stepThree {
+    height: 8rem;
+    top: 35%;
+    right: 16%;
+    transform: rotate(-18deg);
+}
+
+#twigBrown2 {
+    width: 6rem;
+    position: absolute;
+    z-index: 3;
+    top: 31%;
+    right: 27%;
+    animation: floatTwigBrown2 2.5s infinite ease-in-out;
+    -webkit-animation:  floatTwigBrown2 2.5s infinite ease-in-out;
+    transform: rotate(-65deg);
+    -webkit-transform: rotate(-65deg);
+    transition: all 1s ease-in-out;
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+   
+}
+#twigBrown2.stepOne {
+    height: 6.5rem;
+    top: 36%;
+    transform: rotate(-65deg);
+}
+#twigBrown2.stepTwo {
+    height: 7rem;
+    top: 41%;
+    right: 25%;
+    transform: rotate(-65deg);
+}
+#twigBrown2.stepThree{
+    height: 8.5rem;
+    top: 34%;
+    right: 22%;
+    transform: rotate(-70deg);
+}
+
+
+#singleFlPink {
+    width: 6rem;
+    position: absolute;
+    z-index: 4;
+    top: 31%;
+    right: 17%;
+    animation: float 4s infinite ease-in-out;
+    -webkit-animation: float 4s infinite ease-in-out;
+    transition: all 1s ease-in-out;
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+}
+#singleFlPink.stepOne {
+    top: 35%;
+    width: 6.5rem;
+    right: 18%;
+}
+#singleFlPink.stepTwo {
+    width: 7rem;
+    top: 37%;
+    right: 19%;
+}
+#singleFlPink.stepThree {
+    width: 7.5rem;
+    top: 34%;
+    right: 20%;
+    transform: rotate(-20deg);
+}
+
+#threeLeaf {
+    width: 5rem;
+    position: absolute;
+    z-index: 9;
+    top: 8%;
+    right: 19%;
+    animation: float 3.6s infinite ease-in-out;
+    -webkit-animation: float 3.6s infinite ease-in-out;
+    transition: all 1s ease-in-out;
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+}
+#threeLeaf.stepOne {
+    top: 12%;
+}
+#threeLeaf.stepTwo {
+    top: 23%;
+    right: 19%;
+}
+#threeLeaf.stepThree {
+    top: 43%;
+    right: 16%;
+}
+
+@keyframes floatTwigBrown2{
+    0% { transform: rotate(-65deg) }
+    50% { transform: translateY(10px) rotate(-65deg) }
+    100% { transform: rotate(-65deg) }
+  }
+
+@keyframes float {
+    0% {}
+    50% { transform: translateY(5px) }
+    100% {}
+  }
+
+@keyframes float-20 {
+    0% {
+        transform: rotate(-18deg);
+        -webkit-transform: rotate(-18deg)
+    }
+    50% {
+        transform: translateY(5%) rotate(-20deg);
+        -webkit-transform: translateY(5%) rotate(-20deg)
+    }
+    100% { transform: rotate(-18deg);
+        -webkit-transform: rotate(-18deg)}
+  }
+
+@keyframes float30 {
+    0% {transform: translateY(0px) rotate(28deg)}
+    50% {transform: translateY(7px) rotate(30deg)}
+    100% {transform: translateY(0px) rotate(28deg)}
+  }

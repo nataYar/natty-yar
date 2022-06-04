@@ -1,6 +1,6 @@
 import React, { useRef , useEffect } from 'react';
 import './header.css';
-import { sliderFn, heroImgFn, sectionNameFn } from '../animation.js';
+import { sliderFn, heroImgFn } from '../animation.js';
 
 const Header = () => {
   const introRef = useRef(null);
@@ -12,10 +12,6 @@ const Header = () => {
   //animating img and sliders on load
   useEffect(() => {
     sliderFn(introRef.current, nameRef.current, infoRef.current);
-  },[])
-
- useEffect(() => {
-    sectionNameFn()
   },[])
 
   useEffect(() => {
@@ -37,8 +33,8 @@ const Header = () => {
         </h1>
       </div>
     </div>
-    <div className='slider slider1'></div>
-    <div className='slider slider2'></div> 
+    <div className='slider-header slider1'></div>
+    <div className='slider-header slider2'></div> 
 
     <div className="header-container" ref={nameRef}>
       <h1 className="title">front end </h1>

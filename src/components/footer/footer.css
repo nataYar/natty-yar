@@ -3,16 +3,30 @@
     height: auto;
     padding: 1.5rem;
     margin-top: -0.1%;
-    background-color: hsl(24, 8%, 88%);
-
+    background-color: #e3e0de;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
+    overflow-x: hidden;
+}
+
+.svg-container {
+    display: none;
 }
 
 @media screen and (min-width: 992px) {
     .footer-container{
-        padding: 1rem 4.37rem;
+        flex-direction: row;
+        position: absolute;
+        padding-top: 5rem;
+        padding-left: 4.37rem;
+        padding-right: 4.37rem;
+        height: 100vh;
+    }
+
+    .svg-container {
+        display: block;
+        width: 50%;
     }
 }

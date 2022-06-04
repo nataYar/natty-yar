@@ -14,7 +14,7 @@
 .project-item {
     width: 100%;
     height: auto; 
-    margin-bottom: 10vh;
+    margin-bottom: 15vh;
 }
 
 @media screen and (min-width: 992px) {
@@ -30,7 +30,6 @@
     .project-item {
         width: 100%;
         height: auto; 
-        margin-bottom: 10vh;
         margin-left: 6rem;
         margin-right: 6rem;
     }

@@ -26,6 +26,7 @@ nav{
     transform: translateY(-50%);
     z-index: 1000;
     cursor: pointer;
+    transition: all 1s ease-in-out;
 }
 
 .logo-black { 
@@ -156,6 +157,7 @@ nav{
     .nav-wrapper li {
         padding: 0%;
         margin-left:  2%;
+        list-style-type: none;
     }
     
     .nav-item {
