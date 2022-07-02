@@ -1,14 +1,13 @@
 import React, {useState, useRef, useEffect} from 'react';
 import './contactForm.css';
 import emailjs from '@emailjs/browser';
-import { SERVICE_ID, TEMPLATE_ID, PUBLIC_KEY } from '../constants.js';
-import { flowerAnimationOne } from '../animation';
+import { SERVICE_ID, TEMPLATE_ID, PUBLIC_KEY } from '../../service/constants';
+import { flowerAnimationOne } from '../../service/animation';
 
 const ContactForm = () => {
     const [inputName, setInputName] = useState(false);
     const [inputEmail, setInputEmail] = useState(false);
     const [inputMessage, setInputMessage] = useState(false);
-
     const form = useRef();
 
     const sendEmail = (e) => {
@@ -35,10 +34,19 @@ const ContactForm = () => {
         flowerAnimationOne(inputName, inputEmail, inputMessage)
     })
 
+    const copyFn = () => {
+        const copyText =  document.querySelector('.email').innerHTML
+        navigator.clipboard.writeText(copyText)
+    }
+
     return (
         <div className='form-container'>
-            <p>Feel free to send an e-mail on hello@.com</p>
-            <p>Or drop-in a mail here!</p>
+            <p>Feel free to send an e-mail on</p>
+            
+            <button className="email-button" type="button" data-hover="COPY">
+                <span className='email' onClick={() => copyFn()}>n.yarysheva@gmail.com</span>
+            </button>
+            <p>or drop-in a mail here!</p>
 
             <form ref={form} onSubmit={sendEmail}>
                 <div className='field'>

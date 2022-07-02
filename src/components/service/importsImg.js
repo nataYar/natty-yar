@@ -1,5 +1,9 @@
+export { default as hero_img_600 } from '../../images/hero_img_600.webp';
+export { default as hero_img_1300 } from '../../images/hero_img.webp';
+
 export { default as chatImg } from '../../images/screens/laptop/chat.webp';
 export { default as notesImg } from '../../images/screens/laptop/notes.webp';
+
 export { default as weatherImg } from '../../images/screens/laptop/weather.webp';
 export { default as gameImg }from '../../images/screens/laptop/game.webp';
 export { default as portfolioImg }from '../../images/screens/laptop/portfolio.webp';

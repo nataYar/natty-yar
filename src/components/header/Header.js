@@ -1,6 +1,6 @@
 import React, { useRef , useEffect } from 'react';
 import './header.css';
-import { sliderFn, heroImgFn } from '../animation.js';
+import { sliderFn, heroImgFn } from '../service/animation.js';
 
 const Header = () => {
   const introRef = useRef(null);
@@ -37,11 +37,11 @@ const Header = () => {
     <div className='slider-header slider2'></div> 
 
     <div className="header-container" ref={nameRef}>
-      <h1 className="title">front end </h1>
-      <h1 className="title">developer</h1>
+      <h1>front end </h1>
+      <h1>developer</h1>
       
       <div className="hero-container">
-        <img ref={heroRef} alt='' />
+        <img ref={heroRef} alt=''  />
       </div>
 
       <div className='name' >
@@ -50,14 +50,14 @@ const Header = () => {
       </div>
     </div>
     <div className='info-container' ref={infoRef}>
-        <a href="" target="_blank">
-          <div className='icon cv'/>  
-        </a>
-        <a href="https://www.w3schools.com" target="_blank" >
+        <a href="https://www.linkedin.com/in/natalia-yarysheva/" target="_blank" >
           <div className='icon in' />
         </a>
         <a href="https://github.com/nataliaYarr" target="_blank">
           <div className='icon git' />
+        </a>
+        <a href="" target="_blank">
+          <div className='icon cv'/>  
         </a>
     </div>
   </div>

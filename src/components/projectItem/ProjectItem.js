@@ -1,20 +1,18 @@
 import React from 'react';
 import './projectItem.css';
-import Slider from './Slider'
+import ImgContainer  from './ImgContainer'
 
 const ProjectItem = ({ tabletView, name, url, git, img, img2, description, technologies, features, challenges, video, mobileImg }) => {
 
   const handleModalImg = (childData) => {
     document.getElementById('myModal').style.top = '0%';
     document.getElementById('myModal').style.opacity = '1';
-    // document.getElementById('myModal').classList.add = 'modal-animation';
     document.getElementById('imgModal').src = childData;
   }
 
   const closeModal = () => {
     document.getElementById('myModal').style.top = '100%';
     document.getElementById('myModal').style.opacity = '0';
-    // document.getElementById('myModal').classList.remove = 'animation';
   }
 
   return (
@@ -32,23 +30,24 @@ const ProjectItem = ({ tabletView, name, url, git, img, img2, description, techn
       </div>
 
       <div id='myModal' className='modal' onClick={ () => closeModal() } >
-        <img className='modal-content' id='imgModal' />
+        <img className='modal-content' id='imgModal' alt='full image'/>
       </div>
 
       <div className='title-side'>
         { 
           tabletView ?  <p className='project-description'> {description}</p> : null
         }
-        
-        <Slider parentCallback={ handleModalImg } mobileImg={mobileImg} img={img} img2={img2} video={video} />
-      
+        <ImgContainer parentCallback={ handleModalImg } name={name} mobileImg={mobileImg} img={img} img2={img2} video={video} />
       </div>
-        
       <div className='description-side'>
         {
           !tabletView ?  <p className='project-description'>{description}</p> : null
         }
-        <p className='project-description'><span className='highlight-purple highlight-font'>Featutes: </span>{features}</p>
+        {
+          features ?
+          <p className='project-description'><span className='highlight-purple highlight-font'>Featutes: </span>{features}</p> 
+          : null
+        }
         <p className='project-description'><span className='highlight-purple highlight-font'>Challenges: </span>{challenges}</p>
         <p className='project-description highlight-purple highlight-font'>{technologies}</p>
       </div>

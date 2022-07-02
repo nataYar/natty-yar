@@ -4,7 +4,6 @@
     font-size: 1.25rem;
     width: 100%;
     height: auto;
-   
     overflow: visible;
 }
 
@@ -25,7 +24,7 @@ form {
     border: none;
     outline: none;
     background-color: transparent;
-    border-bottom: 2px solid #000000;
+    border-bottom: 1px solid #000000;
   
     font-family: 'Montserrat', sans-serif;
     font-size: 1.25rem;
@@ -79,7 +78,7 @@ form {
 .form-container textarea:focus, 
 .form-container input:valid, 
 .form-container textarea:valid  {
-    border-bottom: 2px solid #8276d1;
+    border-bottom: 1px solid #8276d1;
 }
 
 input:-webkit-autofill,
@@ -110,14 +109,77 @@ input:-webkit-autofill:active{
     border-radius: 5px;
 }
 
+.email-button {
+    display: inline-block;
+    position: relative;
+    margin: 1em 0;
+    padding: 0.67em;
+    border-radius: 0.5rem;
+    background-color: #aaa4d2;
+    outline: none;
+    border: none;
+    overflow: hidden;
+    text-decoration: none;
+}
+
+.email-button span {
+    font-family: 'Inconsolata', monospace;
+    text-transform: uppercase;
+    font-size: 1.25rem;
+    
+    -webkit-transition: 0.6s;
+    -moz-transition: 0.6s;
+    -o-transition: 0.6s;
+    transition: 0.6s;
+    -webkit-transition-delay: 0.2s;
+    -moz-transition-delay: 0.2s;
+    -o-transition-delay: 0.2s;
+    transition-delay: 0.2s;
+}
+
+.email-button:before {
+    content: 'CLICK TO COPY';
+    font-family: 'Inconsolata', monospace;
+    text-transform: uppercase;
+    font-size: 1.25rem;
+
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    opacity: 0;
+    -webkit-transition: .25s,opacity .6s;
+    -moz-transition: .25s,opacity .6s;
+    -o-transition: .25s,opacity .6s;
+    transition: .25s,opacity .6s;
+}
+
+.email-button:hover { 
+    cursor: grab; 
+} 
+
+.email-button:hover span { 
+    opacity: 0;
+}
+
+.email-button:hover:before {
+    opacity: 1;
+    -webkit-transition-delay: .25s;
+    -moz-transition-delay: .25s;
+    -o-transition-delay: .25s;
+    transition-delay: .25s;
+}
+
 @media screen and (min-width: 992px) {
     .form-container {
         font-family: 'Inconsolata', monospace;
         text-transform: uppercase;
         font-size: 1.25rem;
-        width: 50%;
+        width: 42%;
         padding-top: 0rem;
         align-self: center;
         padding-top: 4rem;
+        padding-left: 1.63rem;
     }
+
+    
 }

@@ -8,6 +8,7 @@
     flex-flow: column nowrap;
     justify-content: space-evenly; 
     align-items: flex-start;
+    overflow: hidden;
 }
 
 .slider-container {
@@ -73,20 +74,21 @@
 
 .header-container {
     width: 100%;
-    padding-left: 1.5rem;
+    margin-left: 1.5rem;
 }
 
 .header-container h1 {
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
-    height: auto;
-    overflow: hidden;
-
     font-size: 3.3rem;
     text-transform: uppercase;
     line-height: .75;
     background-color: transparent;
-    margin-left: -.5%;
+    margin-left: -.25rem;
+}
+
+.name h1:nth-child(2) {
+    padding-left: .3rem;
 }
 
 .hero-container {
@@ -101,9 +103,9 @@
     position: relative;
     top: -112%; 
     filter: grayscale(.3);
-    background-image:url("../../images/hero-img.webp");
+    background-image: url("../../images/hero_img_600.webp");
     background-size: cover;
-    background-position: center;
+    background-position: center center;
     background-repeat: no-repeat;
     width: 100vw;
     height: 60vh;
@@ -132,10 +134,26 @@
     background-repeat: no-repeat;
 }
 
-.cv { background-image:url("../../images/icons/cv.png"); }
-.in { background-image: url("../../images/icons/linkedin.png"); }
-.git { background-image: url("../../images/icons/github.png"); }
+.cv {
+    background-image:url("../../images/icons/cv.svg");
+    border-radius: 0%; 
+}
+.in { background-image: url("../../images/icons/linkedin.svg"); }
+.git { background-image: url("../../images/icons/github.svg"); }
 
+
+@media screen and (max-width: 375px)  {
+    .header-container h1 {
+        font-size: 2.5rem;
+    }
+}
+
+@media screen and (min-width: 400px)  {
+    .hero-container img {
+        background-image: url("../../images/hero_img.webp");
+        top: -145%; 
+    }
+}
 
 @media screen and (min-width: 992px) {
     .hero-container {

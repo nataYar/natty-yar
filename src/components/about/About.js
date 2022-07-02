@@ -1,6 +1,6 @@
 import React, { useRef, useEffect } from 'react';
 import './about.css';
-import { highlightAboutFn } from '../animation.js';
+import { highlightAboutFn } from '../service/animation.js';
 
 const About = () => {
   const aboutSectionRef = useRef(null)
@@ -20,7 +20,7 @@ const About = () => {
           <br/>
           <br/>
           <span className='highlight-scroll'>Some of the skills demonstrated in this 
-          portfolio include CSS Grid, Flexbox, JS, React. </span>
+          portfolio include CSS(Grid, Flexbox), JS, React. </span>
           <span className='highlight-scroll'>I love art and Adobe Illustrator. </span>
         </p>
       </div>

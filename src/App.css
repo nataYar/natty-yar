@@ -3,6 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   color: hsl(0, 0%, 0%);
+  scroll-behavior: smooth;
 }
 
 .section-title {

@@ -13,7 +13,7 @@ svg {
 #blob {
     position: absolute;
     bottom: 45%;
-    right: 25%;
+    right: 31%;
     transform: translate(45%, 10%) rotate(-45deg);
     -webkit-transform: translate(45%, 10%) rotate(-45deg);
     transition: all 1s ease-in-out;
@@ -30,6 +30,7 @@ svg {
 }
 #blob.stepThree {
     bottom: 28%;
+    right: 30%;
 }
 
 
@@ -38,7 +39,7 @@ svg {
     display: block;
     position: absolute;
     bottom: 10%;
-    right: 23%;
+    right: 27%;
     transform: translateX(50%);
     -webkit-transform:  translateX(50%);
     transition: all 1s ease-in-out;
@@ -62,7 +63,7 @@ svg {
     width: 14rem;
     position: absolute;
     bottom: 10%;
-    right: 23%;
+    right: 27%;
     transform: translateX(50%);
     -webkit-transform:  translateX(50%);
     transition: all 1s ease-in-out;
@@ -86,9 +87,8 @@ svg {
 #letter {
     width: 9rem;
     position: absolute;
-
     top: 22%;
-    right: 20%;
+    right: 23%;
     animation: float-20 2s infinite ease-in-out;
     -webkit-animation: float-20 2s infinite ease-in-out;
     transition: all 1s ease-in-out;
@@ -105,12 +105,12 @@ svg {
 }
 #letter.stepTwo {
     top: 34%;
-    right: 18%;
+    right: 22%;
     transform: rotate(-20deg);
 }
 #letter.stepThree {
     top: 45%;
-    right: 18%;
+    right: 22%;
     transform: rotate(-20deg);
 }
 
@@ -120,7 +120,7 @@ svg {
     position: absolute;
     
     top: 15%;
-    right: 5%;
+    right: 8%;
     animation: float30 3s infinite ease-in-out;
     -webkit-animation: float30 3s infinite ease-in-out;
     transform: rotate(30deg);
@@ -138,13 +138,13 @@ svg {
     transform: rotate(30deg);
 }
 #fl3purpleStripes.stepTwo {
-    top: 30%;
-    right: 9%;
+    top: 27%;
+    right: 14%;
     transform: rotate(30deg);
 }
 #fl3purpleStripes.stepThree {
-    top: 32%;
-    right: 14%;
+    top: 30%;
+    right: 17%;
     transform: rotate(40deg);
 }
 
@@ -153,7 +153,7 @@ svg {
     width: 6rem;
     position: absolute;
     top: 15%;
-    left: 59%;
+    left: 55%;
     animation: float-20 4s infinite ease-in-out;
     -webkit-animation: float-20 4s infinite ease-in-out;
     z-index: 3;
@@ -166,12 +166,12 @@ svg {
     top: 20%;
 }
 #flPink.stepTwo {
-    top: 31%;
-    left: 62%;
+    top: 27%;
+    left: 61%;
 }
 #flPink.stepThree{
-    top: 33%;
-    left: 68%;
+    top: 30%;
+    left: 64%;
 }
 
 
@@ -179,7 +179,7 @@ svg {
     width: 6rem;
     position: absolute;
     top: 10%;
-    right: 29%;
+    right: 32%;
     animation: float30 3s infinite ease-in-out;
     -webkit-animation:float30 3s infinite ease-in-out;
     transition: all 1s ease-in-out;
@@ -192,12 +192,12 @@ svg {
     top: 13%;
 }
 #flYellow.stepTwo {
-    top: 25%;
-    right: 28%;
+    top: 22%;
+    right: 29%;
 }
 #flYellow.stepThree {
     top: 42%;
-    right: 26%;
+    right: 27%;
 }
 
 
@@ -207,7 +207,7 @@ svg {
     z-index: 2;
 
     top: 10%;
-    right: 10%;
+    right: 13%;
     animation: float 2.2s infinite ease-in-out;
     -webkit-animation:float 2.2s infinite ease-in-out;
     transition: all 1s ease-in-out;
@@ -220,13 +220,13 @@ svg {
     top: 15%;
 }
 #twigBrown1.stepTwo {
-    top: 26%;
-    right: 11%;
+    top: 30%;
+    right: 16%;
 }
 #twigBrown1.stepThree {
     height: 8rem;
-    top: 35%;
-    right: 16%;
+    top: 31%;
+    right: 20%;
     transform: rotate(-18deg);
 }
 
@@ -235,7 +235,7 @@ svg {
     position: absolute;
     z-index: 3;
     top: 31%;
-    right: 27%;
+    right: 30%;
     animation: floatTwigBrown2 2.5s infinite ease-in-out;
     -webkit-animation:  floatTwigBrown2 2.5s infinite ease-in-out;
     transform: rotate(-65deg);
@@ -254,13 +254,13 @@ svg {
 #twigBrown2.stepTwo {
     height: 7rem;
     top: 41%;
-    right: 25%;
+    right: 27%;
     transform: rotate(-65deg);
 }
 #twigBrown2.stepThree{
     height: 8.5rem;
-    top: 34%;
-    right: 22%;
+    top: 32%;
+    right: 26%;
     transform: rotate(-70deg);
 }
 
@@ -270,7 +270,7 @@ svg {
     position: absolute;
     z-index: 4;
     top: 31%;
-    right: 17%;
+    right: 20%;
     animation: float 4s infinite ease-in-out;
     -webkit-animation: float 4s infinite ease-in-out;
     transition: all 1s ease-in-out;
@@ -286,12 +286,12 @@ svg {
 #singleFlPink.stepTwo {
     width: 7rem;
     top: 37%;
-    right: 19%;
+    right: 20%;
 }
 #singleFlPink.stepThree {
     width: 7.5rem;
     top: 34%;
-    right: 20%;
+    right: 22%;
     transform: rotate(-20deg);
 }
 
@@ -300,7 +300,7 @@ svg {
     position: absolute;
     z-index: 9;
     top: 8%;
-    right: 19%;
+    right: 22%;
     animation: float 3.6s infinite ease-in-out;
     -webkit-animation: float 3.6s infinite ease-in-out;
     transition: all 1s ease-in-out;
@@ -312,12 +312,12 @@ svg {
     top: 12%;
 }
 #threeLeaf.stepTwo {
-    top: 23%;
+    top: 24%;
     right: 19%;
 }
 #threeLeaf.stepThree {
     top: 43%;
-    right: 16%;
+    right: 20%;
 }
 
 @keyframes floatTwigBrown2{
