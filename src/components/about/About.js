@@ -7,7 +7,7 @@ const About = () => {
 
   useEffect(() => {
      highlightAboutFn()
-  },[])
+  }, [])
   
   return (
     <div id='section-about' className='about-container' ref={aboutSectionRef} >
@@ -20,8 +20,8 @@ const About = () => {
           <br/>
           <br/>
           <span className='highlight-scroll'>Some of the skills demonstrated in this 
-          portfolio include CSS(Grid, Flexbox), JS, React. </span>
-          <span className='highlight-scroll'>I love art and Adobe Illustrator. </span>
+          portfolio include CSS (Grid, Flexbox), JS, React. </span>
+          <span className='highlight-scroll'>I love art and vector graphics. </span>
         </p>
       </div>
     </div>

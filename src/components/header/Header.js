@@ -50,15 +50,15 @@ const Header = () => {
       </div>
     </div>
     <div className='info-container' ref={infoRef}>
-        <a href="https://www.linkedin.com/in/natalia-yarysheva/" target="_blank" >
+        <a href="https://www.linkedin.com/in/natalia-yarysheva/" target="_blank" rel="noreferrer" >
           <div className='icon in' />
         </a>
-        <a href="https://github.com/nataliaYarr" target="_blank">
+        <a href="https://github.com/nataYar/" target="_blank" rel="noreferrer">
           <div className='icon git' />
         </a>
-        <a href="" target="_blank">
+        {/* <a href="" target="_blank">
           <div className='icon cv'/>  
-        </a>
+        </a> */}
     </div>
   </div>
   )

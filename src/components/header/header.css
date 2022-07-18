@@ -117,7 +117,7 @@
     align-items: center;
     justify-content: space-between;
     height: auto;
-    width: 10rem;
+    width: auto;
     margin-left: 1.5rem;
     position: absolute;
     bottom: 0;
@@ -139,8 +139,27 @@
     border-radius: 0%; 
 }
 .in { background-image: url("../../images/icons/linkedin.svg"); }
-.git { background-image: url("../../images/icons/github.svg"); }
 
+.git {
+    background-image: url("../../images/icons/github.svg");
+    margin-left: 1rem; 
+}
+
+/* @media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px)
+  and (orientation: landscape) {
+    .hero-container {
+        display: none; 
+    }
+} */
+
+@media only screen and (max-height : 500px)
+ {
+    .hero-container {
+        display: none; 
+    }
+}
 
 @media screen and (max-width: 375px)  {
     .header-container h1 {
@@ -170,6 +189,7 @@
     }
     .header-container h1 {
        font-size: 6rem;
+       margin-left: -.7rem;
     }
 
     .header {
@@ -182,7 +202,7 @@
 
     .header-container {
         width: 100%;
-        margin-left: -1.5rem;
+        margin-left: 0rem;
         display: flex;
         flex-direction: column;
         justify-content: space-around;
@@ -192,7 +212,7 @@
     .name{
         align-self: flex-end;
         display: flex;
-        flex-direction: column;
+        flex-direction: column; 
         align-items: flex-end;
         position: absolute;
         bottom: 0;

@@ -1,6 +1,7 @@
 import { gsap } from 'gsap';
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-gsap.registerPlugin(ScrollTrigger); 
+
+gsap.registerPlugin(ScrollTrigger);
 
 export const sliderFn = (introRef, nameRef, infoRef) => {
   const tlSlider = gsap.timeline({ defaults: { ease: 'power1.out' } });
@@ -17,8 +18,7 @@ export const sectionNameFn = () => {
       const tlSectionName = gsap.timeline({
         scrollTrigger: {
           trigger: el,
-          start: () => '0% 100%',
-          // markers: true
+          start: () => '0% 100%'
         }
       });
       tlSectionName.fromTo(el, {y: '50px',}, { y: '0px', duration: .8, ease: "back.out(1.2)",});
@@ -26,6 +26,20 @@ export const sectionNameFn = () => {
     })
 }
 
+// for each highlight-scroll element, create its own ScrollTriggered animation
+export const descriptionFn = () => {
+  const projectDescription = document.querySelectorAll('.project-name-animation');
+    projectDescription.forEach((el) => {
+      const tlProjectDescription = gsap.timeline({
+        scrollTrigger: {
+          trigger: el,
+          start: () => '0% 100%'
+        }
+      });
+      tlProjectDescription.fromTo(el, {y: '50px',}, { y: '0px', duration: .8, ease: "back.out(1.2)",});
+      tlProjectDescription.fromTo(el, { opacity: 0 }, { opacity: 1, duration: .8 }, "<");
+    }) 
+}
 
 export const heroImgFn = (heroRef) => {
   const tl2 = gsap.timeline({
@@ -45,7 +59,7 @@ export const highlightAboutFn = () => {
     scrollTrigger: {
       trigger: ".about-container",
       scrub: true,
-      start: "-60%", 
+      start: "-60%",
       end: "20%",
     },
   });
@@ -71,9 +85,9 @@ export const highlightAboutFn = () => {
 
 export const flowerAnimationOne = (a, b, c) => {
   let count = 0;
-  if ( a ) { count += 1 } 
-  if ( b ) { count += 1 } 
-  if ( c ) { count += 1 } 
+  if ( a ) { count += 1 }
+  if ( b ) { count += 1 }
+  if ( c ) { count += 1 }
  
   let imgArr = document.querySelectorAll('.svg');
   if ( count === 0) {

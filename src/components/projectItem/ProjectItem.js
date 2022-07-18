@@ -1,8 +1,13 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './projectItem.css';
-import ImgContainer  from './ImgContainer'
+import ImgContainer  from './ImgContainer';
+import { descriptionFn } from '../service/animation'
 
 const ProjectItem = ({ tabletView, name, url, git, img, img2, description, technologies, features, challenges, video, mobileImg }) => {
+  // const projectDescription = document.querySelectorAll('.project-name-animation');
+  // useEffect(() => {
+  //   descriptionFn()
+  // }, [ width])
 
   const handleModalImg = (childData) => {
     document.getElementById('myModal').style.top = '0%';
@@ -18,12 +23,12 @@ const ProjectItem = ({ tabletView, name, url, git, img, img2, description, techn
   return (
     <div className='project-container'> 
       <div className='project-name'>
-        <h3>{name}</h3>
+        <h3 className='project-name-animation'>{name}</h3>
           <div className='links'>
             <a href={`${url}`} target='_blank'>
-              <div className='highlight-purple highlight-font'>live</div>
+              <div className='highlight-purple highlight-font' rel='noreferrer'>live</div>
             </a>
-            <a href={`${git}`} target='_blank'>
+            <a href={`${git}`} target='_blank' rel='noreferrer'>
               <div className='highlight-purple highlight-font'>code</div>
             </a>
         </div> 
@@ -45,7 +50,7 @@ const ProjectItem = ({ tabletView, name, url, git, img, img2, description, techn
         }
         {
           features ?
-          <p className='project-description'><span className='highlight-purple highlight-font'>Featutes: </span>{features}</p> 
+          <p className='project-description'><span className='highlight-purple highlight-font'>Features: </span>{features}</p> 
           : null
         }
         <p className='project-description'><span className='highlight-purple highlight-font'>Challenges: </span>{challenges}</p>

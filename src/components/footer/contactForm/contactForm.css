@@ -157,6 +157,10 @@ input:-webkit-autofill:active{
     cursor: grab; 
 } 
 
+.email-button:active { 
+    cursor: grabbing; 
+} 
+
 .email-button:hover span { 
     opacity: 0;
 }

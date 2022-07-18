@@ -21,8 +21,6 @@
         flex-flow: row wrap;
         align-items: baseline;
         justify-content: space-between;
-        /* width: 100%;
-        height: auto; */
         padding: 20vh 4.37rem;
     }
     .text-about {

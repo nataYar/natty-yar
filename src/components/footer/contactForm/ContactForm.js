@@ -35,12 +35,11 @@ const ContactForm = () => {
     })
 
     const copyFn = () => {
-        const copyText =  document.querySelector('.email').innerHTML
-        navigator.clipboard.writeText(copyText)
+        navigator.clipboard.writeText('n.yarysheva@gmail.com')
     }
 
     return (
-        <div className='form-container'>
+        <div className='form-container'> 
             <p>Feel free to send an e-mail on</p>
             
             <button className="email-button" type="button" data-hover="COPY">

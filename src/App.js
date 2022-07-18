@@ -1,7 +1,8 @@
 import React, { useState, useEffect }from 'react';
 import './App.css';
 import  { Nav, Header, About, Projects, Footer } from './components/service/imports';
-import { sectionNameFn } from '../src/components/service/animation.js';
+import { sectionNameFn, descriptionFn } from '../src/components/service/animation.js';
+
 
 function App() {
   const [width, setWidth] = useState(null)
@@ -21,7 +22,8 @@ function App() {
   }, [width]) 
   
   useEffect(() => {
-    sectionNameFn()
+    sectionNameFn();
+    descriptionFn()
   }, [width])
 
   return (
