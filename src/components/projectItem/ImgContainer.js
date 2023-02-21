@@ -22,10 +22,10 @@ const ImgContainer = ({ mobileImg, name, img, img2, video, parentCallback }) => 
                 wrapperClass="lite-youtube-wrapper"
             />
         </div>
-        :
+        : img2 ?
        <div className='portfolio-pic-container'>
          <img src={img2} alt='exta image' />
-       </div>
+       </div> : null
         
       }
 

@@ -3,13 +3,38 @@ import ProjectItem from '../projectItem/ProjectItem';
 import './projects.css';
 
 import { chatImg, notesImg, weatherImg, gameImg, portfolioImg, portfolioImg2, 
-  weatherMob, notesMob, chatMob, portfolioMob 
+  weatherMob, notesMob, chatMob, portfolioMob, homeApplianceMob, homeAppliance,
+  osh1200, oshmob
 } from '../service/importsImg';
 
-const Projects = ( { tabletView } ) => {
+const Projects = ( { width, tabletView } ) => {
 
   const projectsArray = [
-    { id: '1',
+    { 
+      name: 'CityTech web app with blog',
+      url: 'https://home-appliances-b8f33.web.app/',
+      git:'https://github.com/nataYar/home-appliances',
+      img: homeAppliance,
+      description: 'A web app for a private business built with React hooks, with an admin dashboard to manage blog and reviews',
+      features: 'Admin dashboard for managing blog and clients\' reviews. Forms for scheduling a call and add a review. Filter function for displaying articles and brands a visitor is interested in. An appealing design using corporate\'s color palette',
+      technologies: 'SASS  Draft.js Firebase React(hooks) HTML', 
+      challenges: 'used Draft.js and Firebase for creating and displaying styled articles on the website. Implemented React Components to reduce code and increase reusability (articles and reviews). Used Firebase API for storing data. Included SASS mixins for easier control throughout styling. Used Routing to move between pages. Incorporated React hooks, Flexbox and media queries to adjust layout according to a screen size.',
+      video:'5h4L4_jHmkI',
+      mobile: homeApplianceMob,
+    },
+    // { 
+    //   name: 'Oshkampe portfolio',
+    //   url: 'https://oksana-oshkampe.web.app/',
+    //   git:'https://github.com/nataYar/oshkampe-website',
+    //   img: osh1200,
+    //   description: 'Portfolio for an artist',
+    //   features: 'Gsap and ScrollMagic animations for desktop and mobile versions. Responsive design. Mouse effect on hover (desktop version).',
+    //   technologies: 'GSAP ScrollMagic HTML CSS JS',
+    //   challenges: 'Applied different animations depending on a screen size. DOM manipulations with JavaScript.',
+    //   video:'JUtWnc0zc7Y',
+    //   mobile: oshmob,
+    // },
+    { 
       name: 'chat app',
       url: 'https://auth-81336.web.app/signup',
       git:'https://github.com/nataliaYarr/react-messenger',
@@ -21,7 +46,7 @@ const Projects = ( { tabletView } ) => {
       video:'MxP0aQvJ0eg',
       mobile: chatMob,
     },
-    { id:'2',
+    { 
       name: 'notes app',
       url: 'https://todolist-beb72.web.app/',
       git: 'https://github.com/nataliaYarr/to-do-list',
@@ -35,7 +60,6 @@ const Projects = ( { tabletView } ) => {
      
     },
     {
-      id:'3',
       name: 'weather app',
       url: 'https://weather-wizard-74435.web.app/',
       git:'https://github.com/nataliaYarr/weather-app',
@@ -47,20 +71,18 @@ const Projects = ( { tabletView } ) => {
       video:'E4HxxayC6XU', 
       mobile: weatherMob
     },
+    // {
+    //   name: 'web game',
+    //   url: 'https://topper-52e80.web.app/',
+    //   git:'https://github.com/nataliaYarr/topper',
+    //   img: gameImg,
+    //   description: 'Lead the frog to a safe place by jumping onto the randomly appering shrinking leaves',
+    //   technologies: 'JavaScript HTML CSS',
+    //   challenges: 'recreated a specific arcade game',
+    //   features: 'vanilla JavaScript web game',
+    //   video:'9MJqrUT0r3s'
+    // },
     {
-      id:'4',
-      name: 'web game',
-      url: 'https://topper-52e80.web.app/',
-      git:'https://github.com/nataliaYarr/topper',
-      img: gameImg,
-      description: 'Lead the frog to a safe place by jumping onto the randomly appering shrinking leaves',
-      technologies: 'JavaScript HTML CSS',
-      challenges: 'recreated a specific arcade game',
-      features: 'vanilla JavaScript web game',
-      video:'9MJqrUT0r3s'
-    },
-    {
-      id:'5',
       name: 'Portfolio website',
       url: 'https://www.natayar.com/',
       git:'https://github.com/nataliaYarr/natty-yar',
@@ -77,10 +99,12 @@ const Projects = ( { tabletView } ) => {
     <div className='projects-container' id='section-projects'>
       <h3 className='section-title'>Projects/</h3>
       {
-        projectsArray.map(el => {
+        projectsArray.map((el, ind )=> {
+
           return (
-            <div className='project-item' key={el.id}>
+            <div className='project-item' key={ind}>
               <ProjectItem 
+              width={width}
               tabletView={tabletView} 
               name={el.name} 
               url={el.url}

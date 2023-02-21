@@ -32,7 +32,7 @@ const ContactForm = () => {
 
     useEffect(() => {
         flowerAnimationOne(inputName, inputEmail, inputMessage)
-    })
+    }, [])
 
     const copyFn = () => {
         navigator.clipboard.writeText('n.yarysheva@gmail.com')

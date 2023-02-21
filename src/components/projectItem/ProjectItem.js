@@ -1,15 +1,18 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useLayoutEffect } from 'react';
 import './projectItem.css';
 import ImgContainer  from './ImgContainer';
-import { descriptionFn } from '../service/animation'
+import { prContainerFn } from '../service/animation'
 
-const ProjectItem = ({ tabletView, name, url, git, img, img2, description, technologies, features, challenges, video, mobileImg }) => {
-  // const projectDescription = document.querySelectorAll('.project-name-animation');
-  // useEffect(() => {
-  //   descriptionFn()
-  // }, [ width])
+const ProjectItem = ({ tabletView, width,  name, url, git, img, img2, description, technologies, features, challenges, video, mobileImg }) => {
 
-  const handleModalImg = (childData) => {
+  useLayoutEffect(() => {
+    const oddChild = document.querySelectorAll('.project-item:nth-child(odd) .project-description');
+    const evenChild = document.querySelectorAll('.project-item:nth-child(even) .project-description');
+    prContainerFn(oddChild, evenChild)
+  }, [width]) // <- empty dependency Array so it doesn't re-run on every render
+
+
+  const handleModalImg = (childData) => { 
     document.getElementById('myModal').style.top = '0%';
     document.getElementById('myModal').style.opacity = '1';
     document.getElementById('imgModal').src = childData;
@@ -24,13 +27,13 @@ const ProjectItem = ({ tabletView, name, url, git, img, img2, description, techn
     <div className='project-container'> 
       <div className='project-name'>
         <h3 className='project-name-animation'>{name}</h3>
-          <div className='links'>
-            <a href={`${url}`} target='_blank'>
-              <div className='highlight-purple highlight-font' rel='noreferrer'>live</div>
-            </a>
-            <a href={`${git}`} target='_blank' rel='noreferrer'>
-              <div className='highlight-purple highlight-font'>code</div>
-            </a>
+        <div className='links'>
+          <a href={`${url}`} target='_blank'>
+            <div className='highlight-purple highlight-font' rel='noreferrer'>live</div>
+          </a>
+          <a href={`${git}`} target='_blank' rel='noreferrer'>
+            <div className='highlight-purple highlight-font'>code</div>
+          </a>
         </div> 
       </div>
 

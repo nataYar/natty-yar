@@ -1,6 +1,7 @@
 import React, { useRef , useEffect } from 'react';
 import './header.css';
 import { sliderFn, heroImgFn } from '../service/animation.js';
+import cvFile from './Natalia_Yarysheva_Frontend_Developer.pdf';
 
 const Header = () => {
   const introRef = useRef(null);
@@ -9,7 +10,7 @@ const Header = () => {
   const infoRef = useRef(null);
   const heroRef = useRef(null)
   
-  //animating img and sliders on load
+  // animating img and sliders on load
   useEffect(() => {
     sliderFn(introRef.current, nameRef.current, infoRef.current);
   },[])
@@ -56,9 +57,8 @@ const Header = () => {
         <a href="https://github.com/nataYar/" target="_blank" rel="noreferrer">
           <div className='icon git' />
         </a>
-        {/* <a href="" target="_blank">
-          <div className='icon cv'/>  
-        </a> */}
+        {/* <a href={cvFile} target="_blank" download>
+          <div className='icon cv' /></a> */}
     </div>
   </div>
   )

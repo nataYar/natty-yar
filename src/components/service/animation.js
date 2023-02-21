@@ -3,42 +3,76 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
-export const sliderFn = (introRef, nameRef, infoRef) => {
-  const tlSlider = gsap.timeline({ defaults: { ease: 'power1.out' } });
-  tlSlider.to('.text', { y: '0%', stagger: .1 , duration: .5});
-  tlSlider.to('.slider-header', { y: '-100%', stagger: .2, duration: .8, delay: .5 });
-  tlSlider.to(introRef, { y: '-100%', duration: 1 }, '<');
-  tlSlider.fromTo(nameRef, { opacity: 0 }, { opacity: 1, duration: .5 });
-  tlSlider.fromTo(infoRef, { opacity: 0 }, { opacity: 1, duration: .5 }, '<');
-}
-
 export const sectionNameFn = () => {
   const titles = document.querySelectorAll('.section-title');
     titles.forEach((el) => {
       const tlSectionName = gsap.timeline({
         scrollTrigger: {
           trigger: el,
-          start: () => '0% 100%'
+          scrub: 1,
+          start: () => '0% 120%',
+         
         }
       });
-      tlSectionName.fromTo(el, {y: '50px',}, { y: '0px', duration: .8, ease: "back.out(1.2)",});
-      tlSectionName.fromTo(el, { opacity: 0 }, { opacity: 1, duration: .8 }, "<");
+      tlSectionName.fromTo(el, {y: '50px',}, { y: '0px', duration: .8, ease: "back.out(1.2)",})
+      .fromTo(el, { opacity: 0 }, { opacity: 1, duration: .8 }, "<");
     })
 }
 
-// for each highlight-scroll element, create its own ScrollTriggered animation
-export const descriptionFn = () => {
-  const projectDescription = document.querySelectorAll('.project-name-animation');
-    projectDescription.forEach((el) => {
-      const tlProjectDescription = gsap.timeline({
-        scrollTrigger: {
-          trigger: el,
-          start: () => '0% 100%'
-        }
-      });
-      tlProjectDescription.fromTo(el, {y: '50px',}, { y: '0px', duration: .8, ease: "back.out(1.2)",});
-      tlProjectDescription.fromTo(el, { opacity: 0 }, { opacity: 1, duration: .8 }, "<");
-    }) 
+export const prContainerFn = (oddChild, evenChild) => {
+    let mm = gsap.matchMedia(),
+    breakPoint = 991;
+
+    mm.add({
+      isDesktop: `(min-width: ${breakPoint}px)`,
+      isMobile: `(max-width: ${breakPoint - 1}px)`,
+    }, (context) => {
+      let { isDesktop, isMobile } = context.conditions;
+
+      oddChild.forEach((el) => {
+        const odd = gsap.timeline({
+          defaults: {
+            ease: "power4.out",
+            duration:  isMobile ? 2 : .5
+          },
+          scrollTrigger: {
+            trigger: el,
+            scrub: 1,
+            start: () => 'top bottom',
+          }
+        });
+        odd.fromTo(el, {
+          x: isDesktop ? '25px': '0px'}, {x: '0px'} )
+        .fromTo(el, {  
+          opacity: 0}, { opacity: 1}, "<");
+      })
+      evenChild.forEach((el) => {
+        const even = gsap.timeline({
+          defaults: {
+            ease: "power4.out",
+            duration: isMobile ? 2 : .5
+          },
+          scrollTrigger: {
+            trigger: el,
+            scrub: 1,
+            start: () => 'top bottom',
+          }
+        });
+        even.fromTo(el, {
+          x: isDesktop ? '-25px': '0px'}, {x: '0px'} )
+        .fromTo(el, {  
+          opacity: 0 }, { opacity: 1}, "<");
+      })
+    })
+}
+
+export const sliderFn = (introRef, nameRef, infoRef) => {
+  const tlSlider = gsap.timeline({ defaults: { ease: 'power2.out' } });
+  tlSlider.to('.text', { y: '0%', stagger: .1 , duration: .5})
+  .to('.slider-header', { y: '-100%', stagger: .2, duration: .8, delay: .5 })
+  .to(introRef, { y: '-100%', duration: 1 }, '<')
+  .fromTo(nameRef, { opacity: 0 }, { opacity: 1, duration: .5 })
+  .fromTo(infoRef, { opacity: 0 }, { opacity: 1, duration: .5 }, '<');
 }
 
 export const heroImgFn = (heroRef) => {
@@ -123,5 +157,3 @@ export const flowerAnimationOne = (a, b, c) => {
   }
   else { return }
 }
-
-
