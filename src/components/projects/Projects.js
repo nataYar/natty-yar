@@ -7,7 +7,7 @@ import { chatImg, notesImg, weatherImg, gameImg, portfolioImg, portfolioImg2,
   osh1200, oshmob
 } from '../service/importsImg';
 
-const Projects = ( { width, tabletView } ) => {
+const Projects = ( ) => {
 
   const projectsArray = [
     { 
@@ -104,8 +104,6 @@ const Projects = ( { width, tabletView } ) => {
           return (
             <div className='project-item' key={ind}>
               <ProjectItem 
-              width={width}
-              tabletView={tabletView} 
               name={el.name} 
               url={el.url}
               git={el.git}

@@ -1,4 +1,4 @@
-import React, {useState, useRef, useEffect} from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import './contactForm.css';
 import emailjs from '@emailjs/browser';
 import { SERVICE_ID, TEMPLATE_ID, PUBLIC_KEY } from '../../service/constants';
@@ -32,7 +32,7 @@ const ContactForm = () => {
 
     useEffect(() => {
         flowerAnimationOne(inputName, inputEmail, inputMessage)
-    }, [])
+    }, [inputName, inputEmail, inputMessage])
 
     const copyFn = () => {
         navigator.clipboard.writeText('n.yarysheva@gmail.com')

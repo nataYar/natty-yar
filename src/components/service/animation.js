@@ -1,69 +1,65 @@
 import { gsap } from 'gsap';
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-
 gsap.registerPlugin(ScrollTrigger);
 
 export const sectionNameFn = () => {
-  const titles = document.querySelectorAll('.section-title');
+  const titles = gsap.utils.toArray('.section-title');
+  // const popEl = gsap.utils.toArray('.popup-anim');
     titles.forEach((el) => {
       const tlSectionName = gsap.timeline({
         scrollTrigger: {
           trigger: el,
-          scrub: 1,
-          start: () => '0% 120%',
-         
+          // scrub: 1,
+          ease: "ease.in(1.2)",
+          // markers: true,
+          start: () => 'top 90%',
         }
       });
-      tlSectionName.fromTo(el, {y: '50px',}, { y: '0px', duration: .8, ease: "back.out(1.2)",})
-      .fromTo(el, { opacity: 0 }, { opacity: 1, duration: .8 }, "<");
+      tlSectionName
+      .fromTo(el, {y: '50px',}, { y: '0px', duration: .6 })
+      .fromTo(el, { opacity: 0 }, { opacity: 1, duration: .6 }, "<");
     })
 }
 
-export const prContainerFn = (oddChild, evenChild) => {
-    let mm = gsap.matchMedia(),
-    breakPoint = 991;
-
-    mm.add({
-      isDesktop: `(min-width: ${breakPoint}px)`,
-      isMobile: `(max-width: ${breakPoint - 1}px)`,
-    }, (context) => {
-      let { isDesktop, isMobile } = context.conditions;
-
+export const prContainerFn = () => {
+  const oddChild = gsap.utils.toArray('.project-item:nth-child(odd) .project-description');
+  const evenChild = gsap.utils.toArray('.project-item:nth-child(even) .project-description');
       oddChild.forEach((el) => {
         const odd = gsap.timeline({
           defaults: {
-            ease: "power4.out",
-            duration:  isMobile ? 2 : .5
+            ease: "power1.out",
+            duration: .8,
           },
           scrollTrigger: {
             trigger: el,
-            scrub: 1,
+            // scrub: 1,
+            // markers:true,
             start: () => 'top bottom',
           }
         });
         odd.fromTo(el, {
-          x: isDesktop ? '25px': '0px'}, {x: '0px'} )
+          x: '35px' }, {x: '0px'} )
         .fromTo(el, {  
           opacity: 0}, { opacity: 1}, "<");
       })
       evenChild.forEach((el) => {
         const even = gsap.timeline({
           defaults: {
-            ease: "power4.out",
-            duration: isMobile ? 2 : .5
+            ease: "power1.out",
+            duration: .8,
           },
           scrollTrigger: {
             trigger: el,
-            scrub: 1,
+            // markers:true,
+            // scrub: 1,
             start: () => 'top bottom',
           }
         });
         even.fromTo(el, {
-          x: isDesktop ? '-25px': '0px'}, {x: '0px'} )
+          x: '-35px' }, {x: '0px'} )
         .fromTo(el, {  
           opacity: 0 }, { opacity: 1}, "<");
       })
-    })
 }
 
 export const sliderFn = (introRef, nameRef, infoRef) => {

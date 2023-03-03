@@ -1,16 +1,8 @@
-import React, { useEffect, useLayoutEffect } from 'react';
+import React from 'react';
 import './projectItem.css';
 import ImgContainer  from './ImgContainer';
-import { prContainerFn } from '../service/animation'
 
-const ProjectItem = ({ tabletView, width,  name, url, git, img, img2, description, technologies, features, challenges, video, mobileImg }) => {
-
-  useLayoutEffect(() => {
-    const oddChild = document.querySelectorAll('.project-item:nth-child(odd) .project-description');
-    const evenChild = document.querySelectorAll('.project-item:nth-child(even) .project-description');
-    prContainerFn(oddChild, evenChild)
-  }, [width]) // <- empty dependency Array so it doesn't re-run on every render
-
+const ProjectItem = ({ tabletView,  name, url, git, img, img2, description, technologies, features, challenges, video, mobileImg }) => {
 
   const handleModalImg = (childData) => { 
     document.getElementById('myModal').style.top = '0%';
