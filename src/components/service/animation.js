@@ -2,6 +2,8 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
+// ScrollTrigger.refresh();
+
 export const sectionNameFn = () => {
   const titles = gsap.utils.toArray('.section-title');
   // const popEl = gsap.utils.toArray('.popup-anim');
@@ -28,13 +30,14 @@ export const prContainerFn = () => {
         const odd = gsap.timeline({
           defaults: {
             ease: "power1.out",
-            duration: .8,
+            duration: .1,
           },
           scrollTrigger: {
             trigger: el,
-            // scrub: 1,
             // markers:true,
-            start: () => 'top bottom',
+            scrub: 1,
+            start: () => '0% bottom',
+            end: () => '100% 90%',
           }
         });
         odd.fromTo(el, {
@@ -46,13 +49,14 @@ export const prContainerFn = () => {
         const even = gsap.timeline({
           defaults: {
             ease: "power1.out",
-            duration: .8,
+            duration: .1,
           },
           scrollTrigger: {
             trigger: el,
             // markers:true,
-            // scrub: 1,
-            start: () => 'top bottom',
+            scrub: 1,
+            start: () => '0% bottom',
+            end: () => '100% 90%',
           }
         });
         even.fromTo(el, {
@@ -61,6 +65,7 @@ export const prContainerFn = () => {
           opacity: 0 }, { opacity: 1}, "<");
       })
 }
+
 
 export const sliderFn = (introRef, nameRef, infoRef) => {
   const tlSlider = gsap.timeline({ defaults: { ease: 'power2.out' } });
