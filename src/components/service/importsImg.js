@@ -9,12 +9,14 @@ export { default as weatherImg } from '../../images/screens/laptop/weather.webp'
 export { default as gameImg }from '../../images/screens/laptop/game.webp';
 export { default as portfolioImg }from '../../images/screens/laptop/portfolio.webp';
 export { default as portfolioImg2 }from '../../images/screens/laptop/portfolio2.webp';
+export { default as bmoreImg }from '../../images/screens/laptop/bmore_laptop.webp';
+export { default as healthhubImg } from '../../images/screens/laptop/healthhub_laptop.png';
 
 export { default as chatMob } from '../../images/screens/mobile/chat-mobile.webp';
 export { default as notesMob } from '../../images/screens/mobile/notes-mobile.webp';
 export { default as weatherMob } from '../../images/screens/mobile/weather-mobile.webp';
 export { default as portfolioMob } from '../../images/screens/mobile/portfolio-mobile.webp';
 export { default as homeApplianceMob} from '../../images/screens/mobile/home-appliance-mob.webp';
+export { default as healthhubMob } from '../../images/screens/mobile/healthhub_mob.png';
 
-export { default as osh1200} from '../../images/screens/laptop/osh1200.webp';
-export { default as oshmob} from '../../images/screens/mobile/osh_mob.webp';
+export { default as bmoreMob} from '../../images/screens/mobile/bmore_mob.webp';

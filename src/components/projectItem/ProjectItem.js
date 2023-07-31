@@ -1,13 +1,8 @@
-import React, {useEffect} from 'react';
+import React, { useLayoutEffect } from 'react';
 import './projectItem.css';
 import ImgContainer  from './ImgContainer';
-import { prContainerFn } from '../../components/service/animation';
 
 const ProjectItem = ({ tabletView,  name, url, git, img, img2, description, technologies, features, challenges, video, mobileImg }) => {
-
-  useEffect(() => {
-    prContainerFn()
-  },[])
 
   const handleModalImg = (childData) => { 
     document.getElementById('myModal').style.top = '0%';

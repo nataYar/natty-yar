@@ -3,13 +3,13 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    height: auto;
+    align-items: space-between;
+    height: fit-content;
+    width: 90%;
 }
 
 .video-wrapper {
     height: 5rem;
-    background-color: aqua;
     position: relative;
     width: 100%;
     border-radius: .6rem;
@@ -58,30 +58,13 @@
     border: none;
 }
 
-/* .lite-youtube:hover > .lty-playbtn,
-.lite-youtube .lty-playbtn:focus {
-    filter: none;
-} */
-
-/* Post-click styles */
-/* .lite-youtube.lyt-activated {
-    cursor: unset;
-} */
 
 .lyt-activated .lite-youtube-btn {
     display: none;
     pointer-events: none;
 }
 
-/* .lyt-visually-hidden {
-    clip: rect(0 0 0 0);
-    clip-path: inset(50%);
-    height: 1px;
-    overflow: hidden;
-    position: absolute;
-    white-space: nowrap;
-    width: 1px;
-} */
+
 
 .portfolio-pic-container{
     width: 100%;
@@ -114,6 +97,8 @@
     width: 49%;
     margin-top: 2%;
     cursor: pointer;
+    height: 120px;
+    width: auto;
 }
 
 .full-screen-image {
@@ -126,19 +111,21 @@
 }
 
 .main-img {
-    width: 100%;
+    width: auto;
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
     border-radius: .6rem;
+    object-fit: cover;
 }
 
 .mobile-img {
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
-    width: 100%;
+    width: auto;
     border-radius: .6rem;
+    object-fit: cover;
 }
 
 .shadow img {

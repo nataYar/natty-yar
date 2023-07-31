@@ -2,67 +2,50 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
-// ScrollTrigger.refresh();
+export const scrollTriggerFn = () => { ScrollTrigger.refresh()}
 
-export const sectionNameFn = () => {
-  const titles = gsap.utils.toArray('.section-title');
-  // const popEl = gsap.utils.toArray('.popup-anim');
-    titles.forEach((el) => {
-      const tlSectionName = gsap.timeline({
-        scrollTrigger: {
-          trigger: el,
-          // scrub: 1,
-          ease: "ease.in(1.2)",
-          // markers: true,
-          start: () => 'top 90%',
-        }
-      });
-      tlSectionName
-      .fromTo(el, {y: '50px',}, { y: '0px', duration: .6 })
-      .fromTo(el, { opacity: 0 }, { opacity: 1, duration: .6 }, "<");
-    })
-}
+// export const sectionNameFn = () => {
+//   const titles = gsap.utils.toArray('.section-title');
+//   // const popEl = gsap.utils.toArray('.popup-anim');
+//     titles.forEach((el) => {
+//       const tlSectionName = gsap.timeline({
+//         scrollTrigger: {
+//           trigger: el,
+//           scrub: 1,
+//           ease: "ease.in(1.2)",
+//           // markers: true,
+//           start: () => 'top 100%',
+//           start: () => '100px 90%',
+//         }
+//       });
+//       tlSectionName
+//       .fromTo(el, {y: '50px',}, { y: '0px', duration: .6 })
+//       .fromTo(el, { opacity: 0 }, { opacity: 1, duration: .6 }, "<");
+//     })
+// }
 
 export const prContainerFn = () => {
-  const oddChild = gsap.utils.toArray('.project-item:nth-child(odd) .project-description');
-  const evenChild = gsap.utils.toArray('.project-item:nth-child(even) .project-description');
-      oddChild.forEach((el) => {
+  // const oddChild = gsap.utils.toArray('.project-item:nth-child(odd) .project-description');
+  const child = gsap.utils.toArray('.project-item');
+      child.forEach((el) => {
         const odd = gsap.timeline({
           defaults: {
             ease: "power1.out",
-            duration: .1,
+            duration: 1,
           },
           scrollTrigger: {
             trigger: el,
-            // markers:true,
-            scrub: 1,
-            start: () => '0% bottom',
-            end: () => '100% 90%',
+            markers: true,
+            // scrub: 1,
+            // start: '0% 95%', 
+            start: () => '50px bottom',
+            end: () => '250px 90%',
           }
         });
-        odd.fromTo(el, {
-          x: '35px' }, {x: '0px'} )
-        .fromTo(el, {  
+        // odd.fromTo(el, {
+        //   y: '35px' }, {y: '0px'} )
+        odd.fromTo(el, {  
           opacity: 0}, { opacity: 1}, "<");
-      })
-      evenChild.forEach((el) => {
-        const even = gsap.timeline({
-          defaults: {
-            ease: "power1.out",
-            duration: .1,
-          },
-          scrollTrigger: {
-            trigger: el,
-            // markers:true,
-            scrub: 1,
-            start: () => '0% bottom',
-            end: () => '100% 90%',
-          }
-        });
-        even.fromTo(el, {
-          x: '-35px' }, {x: '0px'} )
-        .fromTo(el, {  
-          opacity: 0 }, { opacity: 1}, "<");
       })
 }
 
