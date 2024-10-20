@@ -11,8 +11,8 @@ const Projects = ( ) => {
   const projectsArray = [
     {
       name: 'Health Hub',
-      url: 'https://health-hub-8ags.vercel.app/dashboard',
-      git:'https://github.com/nataYar/health-hub',
+      url: 'https://nat-health-hub.netlify.app/dashboard',
+      git:'https://github.com/nataYar/health-app',
       img: healthhubImg ,
       description: 'A comprehensive fitness tracking web app with AWS Amplify, Next.js, and Material UI, empowering users to log their weight, set goals, track exercises, and visualize their progress through charts and graphics. The app allows users to register and log in securely, providing a personalized experience.',
       features: 'User Authentication and data storage: Implement secure user registration, login, content management functionality using AWS Amplify. Exercise and Food Tracking: Enable users to log their exercise sessions, to keep track of their fitness activities. Interactive Charts: Visualize user data using advanced charting libraries to provide meaningful insights into their fitness journey. Nutrient and Exercises Search: Utilize the EDAMAM API and ExerciseDB API to allow users to search and log nutrients for their meals, fostering healthy eating habits and search exercises. Goal Setting: Allow users to set fitness and health goals and monitor their progress towards achieving them.',

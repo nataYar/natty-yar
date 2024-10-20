@@ -5,7 +5,7 @@
     justify-content: center;
     align-items: space-between;
     height: fit-content;
-    width: 90%;
+    width: 100%;
 }
 
 .video-wrapper {
@@ -17,7 +17,6 @@
 }
 
 .lite-youtube-wrapper {
-    background-color: rgb(213, 27, 27);
     position: absolute;
     top: 0;
     width: 100%;
@@ -64,8 +63,6 @@
     pointer-events: none;
 }
 
-
-
 .portfolio-pic-container{
     width: 100%;
     margin-top: 3px;
@@ -91,15 +88,10 @@
     height: auto;
     display: flex;
     justify-content: space-between;
+    flex-direction: column;
 }
 
-.slide {
-    width: 49%;
-    margin-top: 2%;
-    cursor: pointer;
-    height: 120px;
-    width: auto;
-}
+
 
 .full-screen-image {
     position: absolute;
@@ -110,8 +102,16 @@
     transform: translateY(-50%);
 }
 
+.slide {
+    width: 100%;
+    margin-top: 2%;
+    cursor: pointer;
+    height: 100%;
+    padding: 0px;
+}
+
 .main-img {
-    width: auto;
+    width: 100%;
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -123,7 +123,7 @@
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
-    width: auto;
+    width: 100%;
     border-radius: .6rem;
     object-fit: cover;
 }
@@ -137,8 +137,14 @@
 }
 
 @media screen and (min-width: 768px) {
+    .slide {
+        /* width: 100%;
+        background-color: aqua;
+        */
+    }
     .main-img {
-        width: 100%;
+        /* width: 100%; */
+        
     }
 
     .mobile-img{
