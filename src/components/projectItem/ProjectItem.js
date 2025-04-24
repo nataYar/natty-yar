@@ -35,7 +35,7 @@ const ProjectItem = ({ tabletView,  name, url, git, img, img2, description, tech
 
       <div className='title-side'>
         { 
-          tabletView ?  <p className='project-description'> {description}</p> : null
+          tabletView < 400?  <p className='project-description'> {description}</p> : null
         }
         <ImgContainer parentCallback={ handleModalImg } name={name} mobileImg={mobileImg} img={img} img2={img2} video={video} />
       </div>
@@ -44,9 +44,9 @@ const ProjectItem = ({ tabletView,  name, url, git, img, img2, description, tech
           !tabletView ?  <p className='project-description'>{description}</p> : null
         }
         {
-          features ?
+          features && (
           <p className='project-description'><span className='highlight-purple highlight-font'>Features: </span>{features}</p> 
-          : null
+        )
         }
         <p className='project-description'><span className='highlight-purple highlight-font'>Challenges: </span>{challenges}</p>
         <p className='project-description highlight-purple highlight-font'>{technologies}</p>

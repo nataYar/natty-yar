@@ -3,21 +3,32 @@ import ProjectItem from '../projectItem/ProjectItem';
 import './projects.css';
 
 import { chatImg, notesImg, bmoreImg, weatherImg, gameImg, portfolioImg, portfolioImg2, 
-  weatherMob, notesMob, chatMob, portfolioMob, homeApplianceMob, homeAppliance, bmoreMob, healthhubMob, healthhubImg
+  weatherMob, notesMob, chatMob, portfolioMob, homeApplianceMob, homeAppliance, bmoreMob, healthhubMob, healthhubImg, symImg, symImgMob 
 } from '../service/importsImg';
 
 const Projects = ( ) => {
 
   const projectsArray = [
     {
+      name: 'SymBizzNet',
+      // url: 'https://nat-health-hub.netlify.app/dashboard',
+      img: symImg,
+      description: 'A fitness tracking app made with Firebase, Next.js, and Material UI. Log your weight, track exercise duration, and check nutritional values of meals. Find recipes and workouts for different body parts, all while seeing your progress in charts. Secure sign-up and login for a personalized experience.',
+      features: 'User Accounts: Easy sign-up and login. Simple Tracking: Log weight, workout time, and meal nutrition. Recipes & Workouts: Search for recipes and targeted exercises. Progress Charts: Visualize your fitness journey. Goal Setting: Create and track your health goals.',
+      technologies: 'Firebase | Next.js | Material UI | React hooks | EDAMAM API | ExerciseDB API',
+      challenges:'Implementing Advanced State Management: Utilize React Context and Firebase\'s data management capabilities to handle complex user data and application state.',
+      // video:'dECOWdDHjeM',
+      mobile: symImgMob 
+    },
+    {
       name: 'Health Hub',
       url: 'https://nat-health-hub.netlify.app/dashboard',
       git:'https://github.com/nataYar/health-app',
       img: healthhubImg ,
-      description: 'A comprehensive fitness tracking web app with AWS Amplify, Next.js, and Material UI, empowering users to log their weight, set goals, track exercises, and visualize their progress through charts and graphics. The app allows users to register and log in securely, providing a personalized experience.',
-      features: 'User Authentication and data storage: Implement secure user registration, login, content management functionality using AWS Amplify. Exercise and Food Tracking: Enable users to log their exercise sessions, to keep track of their fitness activities. Interactive Charts: Visualize user data using advanced charting libraries to provide meaningful insights into their fitness journey. Nutrient and Exercises Search: Utilize the EDAMAM API and ExerciseDB API to allow users to search and log nutrients for their meals, fostering healthy eating habits and search exercises. Goal Setting: Allow users to set fitness and health goals and monitor their progress towards achieving them.',
-      technologies: 'AWS Amplify | Next.js | Material UI | React hooks | EDAMAM API | ExerciseDB API',
-      challenges:'Implementing Advanced State Management: Utilize React Context and Amplify\'s data management capabilities to handle complex user data and application state.',
+      description: 'A fitness tracking app made with Firebase, Next.js, and Material UI. Log your weight, track exercise duration, and check nutritional values of meals. Find recipes and workouts for different body parts, all while seeing your progress in charts. Secure sign-up and login for a personalized experience.',
+      features: 'User Accounts: Easy sign-up and login. Simple Tracking: Log weight, workout time, and meal nutrition. Recipes & Workouts: Search for recipes and targeted exercises. Progress Charts: Visualize your fitness journey. Goal Setting: Create and track your health goals.',
+      technologies: 'Firebase | Next.js | Material UI | React hooks | EDAMAM API | ExerciseDB API',
+      challenges:'Implementing Advanced State Management: Utilize React Context and Firebase\'s data management capabilities to handle complex user data and application state.',
       video:'dECOWdDHjeM',
       mobile: healthhubMob 
     },
@@ -102,7 +113,7 @@ const Projects = ( ) => {
       mobile: portfolioMob,
       description: 'Resporsive personal portfolio, mobile-first design',
       technologies: 'GSAP | Adobe Illustrator | React | JavaScript | HTML | CSS',
-      challenges: 'used React hooks (useState, useEffect, useRef), GSAP animation, made images and layout responsive, created SVG images (Adobe Illustrator) and logo, used facades for better performance (YouTube embeded videos)'
+      challenges: 'used React hooks (useState, useEffect, useRef), GSAP animation, made images and layout responsive, created SVG images (Adobe Illustrator) and logo, used facades for better performance (YouTube embeded videos)',
     }
   ]
 
@@ -111,7 +122,6 @@ const Projects = ( ) => {
       <h3 className='section-title'>Projects/</h3>
       {
         projectsArray.map((el, ind )=> {
-
           return (
             <div className='project-item' key={ind}>
               <ProjectItem 
