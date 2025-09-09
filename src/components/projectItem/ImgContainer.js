@@ -24,7 +24,7 @@ const ImgContainer = ({ mobileImg, name, img, img2, video, parentCallback }) => 
         </div>
         : img2 ?
        <div className='portfolio-pic-container'>
-         <img src={img2}  />
+         <img src={img2} alt='' />
        </div> : null
         
       }
@@ -34,7 +34,7 @@ const ImgContainer = ({ mobileImg, name, img, img2, video, parentCallback }) => 
           <img className='main-img'
           loading='lazy' 
           src={img} 
-         
+          alt='' 
           onClick={ (e) => fullScreen(e) }
            />
         </div>
@@ -44,7 +44,7 @@ const ImgContainer = ({ mobileImg, name, img, img2, video, parentCallback }) => 
             <img className='mobile-img'
             loading='lazy' 
             src={mobileImg} 
-            
+            alt='' 
             onClick={ (e) => fullScreen(e) }/>
           </div>
           : null

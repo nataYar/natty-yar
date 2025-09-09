@@ -2,7 +2,7 @@ import React, { useLayoutEffect } from 'react';
 import './projectItem.css';
 import ImgContainer  from './ImgContainer';
 
-const ProjectItem = ({ tabletView,  name, url, git, img, img2, description, technologies, features, challenges, video, mobileImg }) => {
+const ProjectItem = ({ tabletView,  name, url, git, img, img2, description, technologies, features, challenges, video, mobileImg}) => {
 
   const handleModalImg = (childData) => { 
     document.getElementById('myModal').style.top = '0%';
@@ -32,7 +32,7 @@ const ProjectItem = ({ tabletView,  name, url, git, img, img2, description, tech
       </div>
 
       <div id='myModal' className='modal' onClick={ () => closeModal() } >
-        <img className='modal-content' id='imgModal'/>
+        <img className='modal-content' id='imgModal' alt=''/>
       </div>
 
       <div className='title-side'>
