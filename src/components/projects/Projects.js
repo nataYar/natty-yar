@@ -2,8 +2,8 @@ import React from 'react';
 import ProjectItem from '../projectItem/ProjectItem';
 import './projects.css';
 
-import { chatImg, notesImg, bmoreImg, weatherImg, gameImg, portfolioImg, portfolioImg2, 
-  weatherMob, notesMob, chatMob, portfolioMob, homeApplianceMob, homeAppliance, bmoreMob, healthhubMob, healthhubImg, symImg, symImgMob, lexioImg, lexioMob 
+import {  notesImg, bmoreImg, weatherImg, portfolioImg, portfolioImg2, 
+  weatherMob, notesMob, portfolioMob, homeApplianceMob, homeAppliance, bmoreMob, healthhubMob, healthhubImg, symImg, symImgMob, lexioImg, lexioMob 
 } from '../service/importsImg';
 
 const Projects = ( ) => {

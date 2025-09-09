@@ -32,7 +32,7 @@ const ProjectItem = ({ tabletView,  name, url, git, img, img2, description, tech
       </div>
 
       <div id='myModal' className='modal' onClick={ () => closeModal() } >
-        <img className='modal-content' id='imgModal' alt='full image'/>
+        <img className='modal-content' id='imgModal'/>
       </div>
 
       <div className='title-side'>

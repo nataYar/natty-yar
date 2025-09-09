@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useLayoutEffect }from 'react';
+import React, { useState, useEffect }from 'react';
 import './App.css';
 import  { Nav, Header, About, Projects, Footer } from './components/service/imports';
 

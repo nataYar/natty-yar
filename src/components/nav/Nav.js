@@ -11,7 +11,7 @@ const Nav = ( { tabletView } ) => {
   return (
     <nav>
       <div className='sticky-nav'>
-        <a href='#'><div className={click && tabletView ? 'logo logo-beige' : 'logo logo-black'}></div></a>
+        <div className={click && tabletView ? 'logo logo-beige' : 'logo logo-black'}></div>
         <div className={ click && tabletView ? 'burger clicked' : 'burger' }
         onClick={handleClick}>
           <span className='first'></span>
