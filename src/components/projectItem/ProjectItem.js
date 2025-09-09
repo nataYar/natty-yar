@@ -23,9 +23,11 @@ const ProjectItem = ({ tabletView,  name, url, git, img, img2, description, tech
           <a href={`${url}`} target='_blank'>
             <div className='highlight-purple highlight-font' rel='noreferrer'>live</div>
           </a>
-          <a href={`${git}`} target='_blank' rel='noreferrer'>
-            <div className='highlight-purple highlight-font'>code</div>
-          </a>
+          {git ? 
+            <a href={`${git}`} target='_blank' rel='noreferrer'>
+              <div className='highlight-purple highlight-font'>code</div>
+             </a>
+          : null}
         </div> 
       </div>
 

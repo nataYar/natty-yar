@@ -3,23 +3,38 @@ import ProjectItem from '../projectItem/ProjectItem';
 import './projects.css';
 
 import { chatImg, notesImg, bmoreImg, weatherImg, gameImg, portfolioImg, portfolioImg2, 
-  weatherMob, notesMob, chatMob, portfolioMob, homeApplianceMob, homeAppliance, bmoreMob, healthhubMob, healthhubImg, symImg, symImgMob 
+  weatherMob, notesMob, chatMob, portfolioMob, homeApplianceMob, homeAppliance, bmoreMob, healthhubMob, healthhubImg, symImg, symImgMob, lexioImg, lexioMob 
 } from '../service/importsImg';
 
 const Projects = ( ) => {
 
   const projectsArray = [
     {
-      name: 'SymBizzNet',
-      // url: 'https://nat-health-hub.netlify.app/dashboard',
-      img: symImg,
-      description: 'A fitness tracking app made with Firebase, Next.js, and Material UI. Log your weight, track exercise duration, and check nutritional values of meals. Find recipes and workouts for different body parts, all while seeing your progress in charts. Secure sign-up and login for a personalized experience.',
-      features: 'User Accounts: Easy sign-up and login. Simple Tracking: Log weight, workout time, and meal nutrition. Recipes & Workouts: Search for recipes and targeted exercises. Progress Charts: Visualize your fitness journey. Goal Setting: Create and track your health goals.',
-      technologies: 'Firebase | Next.js | Material UI | React hooks | EDAMAM API | ExerciseDB API',
-      challenges:'Implementing Advanced State Management: Utilize React Context and Firebase\'s data management capabilities to handle complex user data and application state.',
-      // video:'dECOWdDHjeM',
+      name: 'SymbizzNet',
+      url: 'https://symbizznet.com/',
+      // git: '', 
+      img: symImg, // placeholder for a screenshot of the site
+      description: 'A generative AI marketplace offering productivity and aviation tools, including a Flowchart Generator and a FAA Part 107 AI Study Assistant.',
+      features: 'Built and styled responsive, mobile-friendly pages and components using Tailwind CSS, HTML, and JavaScript. Contributed to React-based interfaces for productivity and aviation tools, including UI refinements and layout adjustments.',
+      technologies: 'Tailwind | React | HTML | CSS | JavaScript',
+      challenges: 'Worked on a live production codebase and collaborated with a team. Implemented design improvements while maintaining consistency and responsiveness across different devices.',
+      video: '', 
       mobile: symImgMob 
+    },  
+      {
+      name: 'Lexio',
+      url: 'https://lexio-delta.vercel.app',
+      git: 'https://github.com/nataYar/lexio', 
+      img: lexioImg,
+      description: 'Developed an AI-powered Next.js app using OpenAI to turn articles into practice exercises. Connected Supabase for authentication and storage, News API for content, and Webster’s Dictionary API for word lookups.',
+      features: 'AI Practice Exercises: Automatically generate exercises from articles. Word Lookup: Instantly check definitions via Webster’s Dictionary API. Personalized Content: Users can track progress and view previously practiced articles. Secure Authentication: Managed via Supabase. Responsive UI: Clean, mobile-friendly interface with Tailwind CSS and React Bootstrap.',
+      technologies: 'OpenAI API | Next.js | Tailwind CSS | Supabase | News API | Webster\'s Dictionary API | Bootstrap',
+      challenges: 'Integrating OpenAI API responses into interactive UI while keeping performance smooth and handling API limitations. Designing a scalable component structure for handling both static and dynamic content. Creating a balance between responsiveness, accessibility, and advanced AI-driven features.',
+      video: 'https://youtu.be/i2vurmHm-Ps', 
+      mobile: lexioMob
     },
+
+    
     {
       name: 'Health Hub',
       url: 'https://nat-health-hub.netlify.app/dashboard',
@@ -53,20 +68,20 @@ const Projects = ( ) => {
       features: 'Admin dashboard for managing blog and clients\' reviews. Forms for scheduling a call and add a review. Filter function for displaying articles and brands a visitor is interested in. An appealing design using corporate\'s color palette',
       technologies: 'SASS  Draft.js Firebase React(hooks) HTML', 
       challenges: 'used Draft.js and Firebase for creating and displaying styled articles on the website. Implemented React Components to reduce code and increase reusability (articles and reviews). Used Firebase API for storing data. Included SASS mixins for easier control throughout styling. Used Routing to move between pages. Incorporated React hooks, Flexbox and media queries to adjust layout according to a screen size.',
-      video:'5h4L4_jHmkI',
+      video:'https://youtu.be/5h4L4_jHmkI',
       mobile: homeApplianceMob,
     },
     { 
       name: 'chat app',
       url: 'https://auth-81336.web.app/signup',
       git:'https://github.com/nataliaYarr/react-messenger',
-      img: chatImg,
+      img: lexioImg,
       description: 'Real-time chat where users can interact with each other by sending messages/ documents/ images',
       features: 'sign/log in via email. Messages are saved in a database. Users can select and send emojis. Unread messages notification. Gradient background changing color',
       technologies: 'React | Firebase | HTML | CSS',
       challenges: 'applied Firebase API for instant messaging and storing data. Made the layout responsive (implemented with Grid, Flexbox)',
       video:'MxP0aQvJ0eg',
-      mobile: chatMob,
+      mobile: lexioMob,
     },
     { 
       name: 'notes app',
@@ -93,17 +108,7 @@ const Projects = ( ) => {
       video:'E4HxxayC6XU', 
       mobile: weatherMob
     },
-    {
-      name: 'web game',
-      url: 'https://topper-52e80.web.app/',
-      git:'https://github.com/nataliaYarr/topper',
-      img: gameImg,
-      description: 'Lead the frog to a safe place by jumping onto the randomly appering shrinking leaves',
-      technologies: 'JavaScript HTML CSS',
-      challenges: 'recreated a specific arcade game',
-      features: 'vanilla JavaScript web game',
-      video:'9MJqrUT0r3s'
-    },
+   
     {
       name: 'Portfolio website',
       url: 'https://www.natayar.com/',
