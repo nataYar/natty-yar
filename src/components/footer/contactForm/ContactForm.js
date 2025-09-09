@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import './contactForm.css';
 import emailjs from '@emailjs/browser';
-import { SERVICE_ID, TEMPLATE_ID, PUBLIC_KEY } from '../../service/constants';
+
 import { flowerAnimationOne } from '../../service/animation';
 
 const ContactForm = () => {
@@ -13,7 +13,7 @@ const ContactForm = () => {
     const sendEmail = (e) => {
         e.preventDefault();
 
-        emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, form.current, PUBLIC_KEY)
+        emailjs.sendForm(process.env.REACT_APP_SERVICE_ID, process.env.REACT_APP_TEMPLATE_ID, form.current, process.env.REACT_APP_PUBLIC_KEY)
         .then((result) => {
             console.log(result.text);
         }, (error) => {
