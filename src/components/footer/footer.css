@@ -1,7 +1,9 @@
 .footer-container {
     width: 100vw;
     height: auto;
+
     padding: 1.5rem;
+    
     margin-top: -0.1%;
     background-color: #e3e0de;
     display: flex;
@@ -22,7 +24,7 @@
         padding-top: 5rem;
         padding-left: 4.37rem;
         padding-right: 4.37rem;
-        height: 100vh;
+        height: 120vh;
     }
 
     .svg-container {
